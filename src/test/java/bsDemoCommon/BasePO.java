@@ -4,6 +4,10 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -59,6 +63,24 @@ public class BasePO {
 
     @FindBy(xpath="//*[@id='confirmation-message']")
     public WebElement orderStatus;
+
+    @FindBy(xpath ="//*[@id='nav-search-submit-button']")
+    public WebElement searchClick;
+
+    @FindBy(xpath="//input[@id='twotabsearchtextbox']")
+    public WebElement searchBox;
+
+    @FindBy(xpath="//*[@class='autocomplete-results-container']")
+    public WebElement amazonSearchSuggestions;
+
+    @FindBy(xpath ="//*[@class='a-section a-spacing-small a-spacing-top-small']//span[contains(text(),\"result\")]")
+    public WebElement searchedResult;
+
+    @FindBy(xpath="//ul//li[@aria-label=\"iOS\"]")
+    public WebElement osFilter;
+
+    @FindBy(xpath="//span[contains(text(),'results for')]")
+    public WebElement filteredResult;
 
     public static String readPropertiesFile(String propertyName)
     {
@@ -141,5 +163,96 @@ public class BasePO {
         else
             logger.info("order has not been placed successfully");
     }
+
+    public void launchAmazonURL() {
+        driver.get(readPropertiesFile("amazonDemoURL"));
+    }
+
+    public void amazonSearchProduct() throws InterruptedException {
+        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        searchBox.sendKeys(readPropertiesFile("amazonProductSearch"));
+        searchListSelection();
+        searchClick.click();
+    }
+
+    private void searchListSelection() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+        if (amazonSearchSuggestions.isDisplayed()) {
+            logger.info(("Amazon search list is displayed"));
+            List<WebElement> list = driver.findElements(By.xpath("//*[@class='autocomplete-results-container']//div"));
+
+            logger.info("Total suggestion :" + list.size());
+
+            String expectedSearch = readPropertiesFile("amazonProductSearch");
+
+            for (int ls = 0; ls < list.size(); ls++) {
+                if (list.get(ls).equals(expectedSearch)) {
+                    list.get(ls).click();
+                    break;
+                }
+            }
+        }
+        else
+        {
+            logger.info("no search");
+        }
+    }
+
+    public void searchedPageFilter() throws InterruptedException {
+
+        logger.info("**** total searched result before filter apply*** "+ searchedResult.getText() +"iPhone X");
+        logger.info("Selecting Cell Phone Operating System filter");
+        osFilter();
+        logger.info("Selecting price filter");
+        sortPrice();
+    }
+
+    private void osFilter() throws InterruptedException {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,750)", "");
+        Thread.sleep(2000);
+        try {
+            if(osFilter.isDisplayed()) {
+                osFilter.click();
+            }
+        }catch (NoSuchElementException e){
+            logger.info(String.valueOf(e));
+        }
+
+    }
+
+    private void sortPrice() throws InterruptedException {
+        Thread.sleep(3000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,-750)", "");
+        Select drpCountry = new Select(driver.findElement(By.name("s")));
+        drpCountry.selectByVisibleText("Price: High to Low");
+        Thread.sleep(3000);
+    }
+
+    public void resultPage() throws InterruptedException {
+
+        logger.info("Total product on final result page** " + filteredResult.getText());
+
+        List<WebElement> productName = driver.findElements(By.xpath("//*[@class='s-result-item s-asin sg-col-0-of-12 sg-col-16-of-20 sg-col s-widget-spacing-small sg-col-12-of-16']//h2"));
+        List<WebElement> productPrice = driver.findElements(By.xpath("//*[@class='s-result-item s-asin sg-col-0-of-12 sg-col-16-of-20 sg-col s-widget-spacing-small sg-col-12-of-16']//a//span[@class='a-price']"));
+        List<WebElement> productLink = driver.findElements(By.xpath("//*[@class='s-result-item s-asin sg-col-0-of-12 sg-col-16-of-20 sg-col s-widget-spacing-small sg-col-12-of-16']//h2//a"));
+
+        logger.info(String.valueOf(productName.size()));
+        logger.info(String.valueOf(productPrice.size()));
+        logger.info(String.valueOf(productLink.size()));
+        try {
+            for (int i = 0; i < productName.size(); i++) {
+
+                logger.info("Product Name : " + productName.get(i).getText() + " **** " + " Product Price : " + productPrice.get(i).getText() + " ***** " + " Product Link : " + productLink.get(i).getAttribute("href"));
+            }
+
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            logger.info(String.valueOf(e));
+        }
+    }
 }
+
 

@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" thread-count="3"  parallel="tests" preserve-order="true">
 
-    <!--======================================================-->
+         <!--======================================================-->
     <test name="BroswerStackDemo-Chrome">
         <parameter name="browser" value="Chrome"></parameter>
         <parameter name="browser_version" value="100.0"></parameter>
@@ -12,5 +12,18 @@
         <classes>
             <class name="bsDemoTest.stackDemoTest"></class>
         </classes>
+        <!--======================================================-->
     </test>
+    <test name="AmazonSearchDemo-Chrome">
+        <parameter name="browser" value="Chrome"></parameter>
+        <parameter name="browser_version" value="100.0"></parameter>
+        <parameter name="os" value="Windows"></parameter>
+        <parameter name="os_version" value="10"></parameter>
+
+        <classes>
+            <class name="amazonProductSearch.productSearchTest"></class>
+        </classes>
+        <!--======================================================-->
+    </test>
+
 </suite>

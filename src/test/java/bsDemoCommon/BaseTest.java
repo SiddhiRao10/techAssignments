@@ -24,10 +24,8 @@ public class BaseTest {
 
     @Parameters({"browser","browser_version","os","os_version"})
     @BeforeTest
-    //String browser, String browser_version, String os, String os_version
-    public void setup(String browser, String browser_version, String os, String os_version) throws MalformedURLException, MalformedURLException {
-
-        if(readPropertiesFile("runOn").equals("BrowserStack"))
+     public void setup(String browser, String browser_version, String os, String os_version) throws MalformedURLException, MalformedURLException {
+       if(readPropertiesFile("runOn").equals("BrowserStack"))
         {
             DesiredCapabilities caps=new DesiredCapabilities();
             caps.setCapability("browser",browser);
@@ -43,7 +41,6 @@ public class BaseTest {
             System.setProperty("webdriver.chrome.driver","/Users/siddhirao/IdeaProjects/automateAssignments/src/main/resources/drivers/chromedriver");
             driver=new ChromeDriver();
         }
-
     }
 
     @AfterTest
