@@ -1,5 +1,4 @@
-# techAssignments
-Three assignments of BrowserStack- Automate module
+#  BrowserStack- Automate module Assignments
 
 ==========
 BrowserStack Demo Site
