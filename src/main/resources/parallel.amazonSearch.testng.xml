@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AmazonProductSearchParallelTest" thread-count="3" parallel="tests">
+    <test name="amazonProductSearch-env1">
+        <parameter name="config" value="parallel.amazon.conf.json"/>
+        <parameter name="environment" value="env1"/>
+        <classes>
+            <class name="amazonProductSearch.productSearchTest"/>
+        </classes>
+    </test>
+
+    <test name="amazonProductSearch-env2">
+        <parameter name="config" value="parallel.amazon.conf.json"/>
+        <parameter name="environment" value="env2"/>
+        <classes>
+            <class name="amazonProductSearch.productSearchTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,17 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "siddhirao_EFftXN",
+  "key": "7XEYboWHDzwViv4jSzaJ",
+
+  "capabilities": {
+    "build": "LiveInceptionAssignment",
+    "name": "bsLiveTest_parallel",
+    "browserstack.debug": true
+  },
+
+  "environments": {
+    "env1": {
+      "browser": "chrome"
+    }
+  }
+}

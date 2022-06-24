@@ -2,6 +2,7 @@ package bsDemoCommon;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterTest;
@@ -22,10 +23,11 @@ public class BaseTest {
     public static final Logger logger = Logger.getLogger(String.valueOf(BasePO.class));
     public WebDriver driver;
 
-    @Parameters({"browser","browser_version","os","os_version"})
-    @BeforeTest
-     public void setup(String browser, String browser_version, String os, String os_version) throws MalformedURLException, MalformedURLException {
-       if(readPropertiesFile("runOn").equals("BrowserStack"))
+   //@Parameters({"browser","browser_version","os","os_version"})
+   @BeforeTest
+  // public void setup(String browser, String browser_version, String os, String os_version) throws MalformedURLException, MalformedURLException {
+   public void setup(){
+   /*    if(readPropertiesFile("runOn").equals("BrowserStack"))
         {
             DesiredCapabilities caps=new DesiredCapabilities();
             caps.setCapability("browser",browser);
@@ -37,10 +39,12 @@ public class BaseTest {
             driver=new RemoteWebDriver(browserURL,caps);
         }
         else
-        {
+        {*/
             System.setProperty("webdriver.chrome.driver","/Users/siddhirao/IdeaProjects/automateAssignments/src/main/resources/drivers/chromedriver");
+            // System.setProperty("webdriver.gecko.driver","/Users/siddhirao/IdeaProjects/automateAssignments/src/main/resources/drivers/geckodriver");
+            //   driver =new FirefoxDriver();
             driver=new ChromeDriver();
-        }
+      //  }
     }
 
     @AfterTest

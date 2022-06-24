@@ -1,19 +1,29 @@
 package bsDemoCommon;
 
+import io.netty.handler.codec.rtsp.RtspHeaderValues;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.List;
-import java.util.Properties;
+import java.net.URL;
+import java.io.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.*;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -81,6 +91,27 @@ public class BasePO {
 
     @FindBy(xpath="//span[contains(text(),'results for')]")
     public WebElement filteredResult;
+
+    @FindBy(xpath="//*//ul//li[@class='sign-in-link hide-xs hide-sm']//a[@title=\"Sign In\"]")
+    public WebElement bsSignIn;
+
+    @FindBy(xpath="//input[@id='user_email_login']")
+    public WebElement bsUserName;
+
+    @FindBy(xpath="//input[@id='user_password']")
+    public WebElement bsUserPassword;
+
+    @FindBy(xpath="//input[@id='user_submit']")
+    public WebElement bsUserSubmit;
+
+    @FindBy(xpath="//*//a[@class='header__product-name' and contains(text(),'Live')]")
+    public WebElement liveModule;
+
+    @FindBy(xpath="//div[@id='platform-list-react']")
+    public WebElement liveDashboard;
+
+    @FindBy(xpath="//*[@class='toolbar__head']")
+    public WebElement liveSessionToolbar;
 
     public static String readPropertiesFile(String propertyName)
     {
@@ -226,7 +257,7 @@ public class BasePO {
         Thread.sleep(3000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,-750)", "");
-        Select drpCountry = new Select(driver.findElement(By.name("s")));
+        Select drpCountry = new Select(driver.findElement(By.id("s-result-sort-select")));
         drpCountry.selectByVisibleText("Price: High to Low");
         Thread.sleep(3000);
     }
@@ -253,6 +284,91 @@ public class BasePO {
             logger.info(String.valueOf(e));
         }
     }
+
+    public void launchBrowserStackURL() {
+        driver.get(readPropertiesFile("browserStackURL"));
+    }
+
+    public void signIn() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().window().maximize();
+        bsSignIn.click();
+
+        bsUserName.sendKeys(readPropertiesFile("bsUsername"));
+        bsUserPassword.sendKeys(readPropertiesFile("bsPassword"));
+
+        bsUserSubmit.click();
+
+        driver.get("https://live.browserstack.com/");
+    }
+
+    public void liveSession() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        liveModule.click();
+
+        assert(liveDashboard.isDisplayed()) :"Live dashboard is not launched!";
+        logger.info("Live dashboard is launched successfully.");
+        Thread.sleep(3000);
+
+
+    }
+
+    public void liveWindowsOS() {
+        logger.info(" Live windows OS");
+        List<WebElement> windowsOS=driver.findElements(By.xpath("//*[@class='accordion__content']//div[@role=\"listitem\"]"));
+        int max=windowsOS.size()-1;
+        int i= getRandomNum(max,1);
+        windowsOS.get(i).click(); //selected random windows OS
+        logger.info("Selected windows OS ** "+ windowsOS.get(i).getText());
+
+
+    }
+    int max,min;
+    public int getRandomNum(int max, int min)
+    {
+       return  new Random().nextInt(max - min + 1) + 1;
+    }
+
+    public void liveWindowsBrowser() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        logger.info("Selecting random Chrome browser");
+        List<WebElement> chromeBrowser=driver.findElements(By.xpath("//*[@data-test-browser='chrome']//div[@role='listitem']"));
+        int i=getRandomNum(chromeBrowser.size()-1,1);
+
+        logger.info("Selecting chrome browser version- " + chromeBrowser.get(i).getText());
+        chromeBrowser.get(i).click();
+
+        logger.info("launching browser....");
+    }
+
+    public void liveSessionTesting() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        try
+        {
+            if(liveSessionToolbar.isDisplayed())
+            {
+
+                logger.info("Live session is established, browser is launched");
+
+               // Thread.sleep(9000);
+                WebElement ele=driver.findElement(By.xpath("//*[@class='toolbar__head__icon-collapse']"));
+                driver.findElement(By.xpath("//*[@class='toolbar__head__icon-collapse']")).click();
+                driver.findElement(By.xpath("//*[@id='settings']")).click();
+                Thread.sleep(10000);
+                logger.info("Live session ");
+                Actions builder = new Actions(driver);
+                builder.moveByOffset(500, 40)
+                        .click()
+                        .pause(3000)
+                        .sendKeys("BrowserStack" + Keys.ENTER)
+                        .perform();
+                Thread.sleep(3000);
+
+            }
+        }
+        catch(Exception e)
+        {
+
+        }
+    }
 }
-
-

@@ -10,3 +10,6 @@ shippingProvience=MH
 shippingPostalCode=401105
 amazonDemoURL=https://www.amazon.in/
 amazonProductSearch=iPhone X
+browserStackURL=https://www.browserstack.com/
+bsUsername=siddhi.r+demo@browserstack.com
+bsPassword=Siddemo@1234

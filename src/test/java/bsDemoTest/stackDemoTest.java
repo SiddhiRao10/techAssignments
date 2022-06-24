@@ -3,14 +3,18 @@ package bsDemoTest;
 import bsDemoCommon.BasePO;
 import bsDemoCommon.BaseTest;
 
+import bsDemoCommon.BrowserStackTestNGTest;
 import org.testng.annotations.Test;
 
-public class stackDemoTest extends BaseTest {
+import java.io.IOException;
+import java.net.URISyntaxException;
+
+public class stackDemoTest extends BrowserStackTestNGTest {
     public stackDemoTest() {
     }
 
     @Test
-    public void searchProduct() throws InterruptedException {
+    public void searchProduct() throws InterruptedException, URISyntaxException, IOException {
        BasePO po = new BasePO(this.driver);
         logger.info("*** Launching BS demo URL***");
         po.launchStackURL();
@@ -29,5 +33,6 @@ public class stackDemoTest extends BaseTest {
 
         logger.info("*** order status***");
         po.orderStatus();
+
     }
 }

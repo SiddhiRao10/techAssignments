@@ -2,9 +2,10 @@ package amazonProductSearch;
 
 import bsDemoCommon.BasePO;
 import bsDemoCommon.BaseTest;
+import bsDemoCommon.BrowserStackTestNGTest;
 import org.testng.annotations.Test;
 
-public class productSearchTest extends BaseTest {
+public class productSearchTest extends BrowserStackTestNGTest {
     public productSearchTest() {
     }
 

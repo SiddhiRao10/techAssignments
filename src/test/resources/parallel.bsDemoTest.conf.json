@@ -1,0 +1,24 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "siddhirao_EFftXN",
+  "key": "7XEYboWHDzwViv4jSzaJ",
+
+  "capabilities": {
+    "build": "BrowserStackDemoSiteAssignment",
+    "name": "bsDemoTest_parallel",
+    "browserstack.debug": true
+  },
+
+  "environments": {
+    "env1": {
+      "browser": "chrome"
+    },
+    "env2": {
+      "browser": "firefox"
+    },
+    "env3": {
+      "os": "OS X",
+      "browser": "safari"
+    }
+  }
+}

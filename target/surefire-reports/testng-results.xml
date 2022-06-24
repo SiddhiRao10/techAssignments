@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-06-25T01:18:55 IST" name="LiveInception" finished-at="2022-06-25T01:20:35 IST" duration-ms="100530">
+    <groups>
+    </groups>
+    <test started-at="2022-06-25T01:18:55 IST" name="bsLiveTest-env1" finished-at="2022-06-25T01:20:35 IST" duration-ms="100530">
+      <class name="bsLiveInception.liveInceptionTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:bsLiveInception.liveInceptionTest@49070868]" started-at="2022-06-25T01:18:55 IST" name="setUp" finished-at="2022-06-25T01:19:00 IST" duration-ms="5813" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[parallel.bsLiveInception.conf.json]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[env1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="liveSession()[pri:0, instance:bsLiveInception.liveInceptionTest@49070868]" started-at="2022-06-25T01:19:00 IST" name="liveSession" finished-at="2022-06-25T01:20:33 IST" duration-ms="93089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- liveSession -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:bsLiveInception.liveInceptionTest@49070868]" started-at="2022-06-25T01:20:34 IST" name="tearDown" finished-at="2022-06-25T01:20:35 IST" duration-ms="1507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- bsLiveInception.liveInceptionTest -->
+    </test> <!-- bsLiveTest-env1 -->
+  </suite> <!-- LiveInception -->
+</testng-results>

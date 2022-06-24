@@ -14,6 +14,18 @@
         </classes>
         <!--======================================================-->
     </test>
+
+    <test name="BroswerStackDemo-Safari">
+        <parameter name="browser" value="safari"></parameter>
+        <parameter name="browser_version" value="14"></parameter>
+        <parameter name="os" value="OS X"></parameter>
+        <parameter name="os_version" value="Big Sur"></parameter>
+
+        <classes>
+            <class name="bsDemoTest.stackDemoTest"></class>
+        </classes>
+        <!--======================================================-->
+    </test>
     <test name="AmazonSearchDemo-Chrome">
         <parameter name="browser" value="Chrome"></parameter>
         <parameter name="browser_version" value="100.0"></parameter>
@@ -25,5 +37,14 @@
         </classes>
         <!--======================================================-->
     </test>
+  <!--  <test name="AmazonSearchDemo-Firefox">
+        <parameter name="browser" value="firefox"></parameter>
+        <parameter name="browser_version" value="101.0"></parameter>
+        <parameter name="os" value="Windows"></parameter>
+        <parameter name="os_version" value="10"></parameter>
 
+        <classes>
+            <class name="amazonProductSearch.productSearchTest"></class>
+        </classes>
+    </test> -->
 </suite>

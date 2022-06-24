@@ -1,0 +1,22 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "siddhirao_EFftXN",
+  "key": "7XEYboWHDzwViv4jSzaJ",
+
+  "capabilities": {
+    "build": "automate_assignments",
+    "name": "amazonProductSearch",
+    "browserstack.debug": true
+  },
+
+  "environments": {
+    "env1": {
+      "browser": "chrome"
+    },
+
+    "env2": {
+      "os": "OS X",
+      "browser": "safari"
+    }
+  }
+}

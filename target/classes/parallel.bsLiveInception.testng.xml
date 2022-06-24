@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LiveInception" thread-count="3" parallel="tests">
+    <test name="bsLiveTest-env1">
+        <parameter name="config" value="parallel.bsLiveInception.conf.json"/>
+        <parameter name="environment" value="env1"/>
+        <classes>
+            <class name="bsLiveInception.liveInceptionTest"/>
+        </classes>
+    </test>
+
+
+</suite>
