@@ -56,8 +56,8 @@
                 <version>2.18.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/main/resources/parallel.amazonSearch.testng.xml</suiteXmlFile>
                         <suiteXmlFile>src/main/resources/parallel.bsLiveInception.testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/main/resources/parallel.amazonSearch.testng.xml</suiteXmlFile>
                         <suiteXmlFile>src/main/resources/parallel.bsDemoTest.testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
