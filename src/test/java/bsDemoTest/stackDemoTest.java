@@ -32,7 +32,10 @@ public class stackDemoTest extends BrowserStackTestNGTest {
         po.shippingAddressDetails();
 
         logger.info("*** order status***");
-        po.orderStatus();
+        int status= po.orderStatus();
+
+        logger.info("test status");
+        po.testStatus(status);
 
     }
 }

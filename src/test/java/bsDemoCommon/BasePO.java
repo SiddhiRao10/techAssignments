@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 public class BasePO {
     public static final Logger logger = Logger.getLogger(String.valueOf(BasePO.class));
     protected WebDriver driver;
-
+    int status;
     public BasePO(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -185,14 +185,19 @@ public class BasePO {
             logger.info("Shipping address details screen is not shown");
     }
 
-    public void orderStatus() {
+    public int orderStatus() {
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         if(orderStatus.isDisplayed()) {
-            if(orderStatus.getText().equals("Your Order has been successfully placed."))
+            if(orderStatus.getText().equals("Your Order has been successfully placed.")) {
                 logger.info("Your Order has been successfully placed.");
+                status = 1;
+            }
         }
-        else
+        else {
             logger.info("order has not been placed successfully");
+            status=0;
+        }
+        return status;
     }
 
     public void launchAmazonURL() {
@@ -262,7 +267,7 @@ public class BasePO {
         Thread.sleep(3000);
     }
 
-    public void resultPage() throws InterruptedException {
+    public int resultPage() throws InterruptedException {
 
         logger.info("Total product on final result page** " + filteredResult.getText());
 
@@ -283,6 +288,8 @@ public class BasePO {
         } catch (Exception e) {
             logger.info(String.valueOf(e));
         }
+        status=1;
+        return status;
     }
 
     public void launchBrowserStackURL() {
@@ -341,7 +348,7 @@ public class BasePO {
         logger.info("launching browser....");
     }
 
-    public void liveSessionTesting() throws InterruptedException {
+    public int liveSessionTesting() throws InterruptedException {
         Thread.sleep(3000);
         try
         {
@@ -363,12 +370,24 @@ public class BasePO {
                         .sendKeys("BrowserStack" + Keys.ENTER)
                         .perform();
                 Thread.sleep(3000);
-
+                status=1;
             }
         }
         catch(Exception e)
         {
 
         }
+        return status;
+    }
+
+    public void testStatus(int status) {
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+
+        if (status==1) {
+            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"passed\", \"reason\": \"Test Passed\"}}");
+        }
+        else
+            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"Failed\", \"reason\": \"Test Failed\"}}");
+
     }
 }

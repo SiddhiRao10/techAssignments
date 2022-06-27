@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [LiveInception]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="environment" value="env1"/>
+  <parameter name="config" value="parallel.bsLiveInception.conf.json"/>
+  <test name="bsLiveTest-env1">
+    <parameter name="environment" value="env1"/>
+    <parameter name="config" value="parallel.bsLiveInception.conf.json"/>
+    <classes>
+      <class name="bsLiveInception.liveInceptionTest"/>
+    </classes>
+  </test> <!-- bsLiveTest-env1 -->
+  <test parallel="tests" name="bsLiveTest-env1(failed)">
+    <parameter name="environment" value="env1"/>
+    <parameter name="config" value="parallel.bsLiveInception.conf.json"/>
+    <classes>
+      <class name="bsLiveInception.liveInceptionTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="liveSession"/>
+        </methods>
+      </class> <!-- bsLiveInception.liveInceptionTest -->
+    </classes>
+  </test> <!-- bsLiveTest-env1(failed) -->
+</suite> <!-- Failed suite [LiveInception] -->

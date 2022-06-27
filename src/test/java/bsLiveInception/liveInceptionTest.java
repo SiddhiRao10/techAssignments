@@ -29,7 +29,10 @@ public class liveInceptionTest  extends BrowserStackTestNGTest {
         po.liveWindowsBrowser();
 
         logger.info("*** Live Session testing on launched browser***");
-        po.liveSessionTesting();
+        int status=po.liveSessionTesting();
+
+        logger.info("test status");
+        po.testStatus(status);
 
     }
 }

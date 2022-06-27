@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [BrowserStackDemoSite]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="environment" value="env2"/>
+  <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+  <test name="bsDemoTest-env1">
+    <parameter name="environment" value="env1"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+    <classes>
+      <class name="bsDemoTest.stackDemoTest"/>
+    </classes>
+  </test> <!-- bsDemoTest-env1 -->
+  <test name="bsDemoTest-env2">
+    <parameter name="environment" value="env2"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+    <classes>
+      <class name="bsDemoTest.stackDemoTest"/>
+    </classes>
+  </test> <!-- bsDemoTest-env2 -->
+  <test parallel="tests" name="bsDemoTest-env2(failed)">
+    <parameter name="environment" value="env2"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+    <classes>
+      <class name="bsDemoTest.stackDemoTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="searchProduct"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- bsDemoTest.stackDemoTest -->
+    </classes>
+  </test> <!-- bsDemoTest-env2(failed) -->
+</suite> <!-- Failed suite [BrowserStackDemoSite] -->
