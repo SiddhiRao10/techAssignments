@@ -1,6 +1,6 @@
 package bsDemoCommon;
 
-import io.netty.handler.codec.rtsp.RtspHeaderValues;
+
 import net.bytebuddy.asm.Advice;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -26,6 +26,8 @@ import java.util.logging.Logger;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.testng.annotations.Parameters;
+
 import static bsDemoCommon.BasePO.readPropertiesFile;
 public class BrowserStackTestNGTest {
     public WebDriver driver;
@@ -34,9 +36,11 @@ public class BrowserStackTestNGTest {
     String username = readPropertiesFile("browserStackUserName");
     String accessKey = readPropertiesFile("browserStackPassword");
 
-    @BeforeMethod(alwaysRun = true)
-    @org.testng.annotations.Parameters(value = { "config", "environment" })
+
+
     @SuppressWarnings("unchecked")
+    @BeforeMethod(alwaysRun = true)
+    @Parameters(value = {"config", "environment"})
     public void setUp(String config_file, String environment) throws Exception {
 
         File name= new File("src/test/resources/" + config_file);

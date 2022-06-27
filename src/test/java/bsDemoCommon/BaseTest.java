@@ -24,33 +24,5 @@ public class BaseTest {
     public WebDriver driver;
 
    //@Parameters({"browser","browser_version","os","os_version"})
-   @BeforeTest
-  // public void setup(String browser, String browser_version, String os, String os_version) throws MalformedURLException, MalformedURLException {
-   public void setup(){
-   /*    if(readPropertiesFile("runOn").equals("BrowserStack"))
-        {
-            DesiredCapabilities caps=new DesiredCapabilities();
-            caps.setCapability("browser",browser);
-            caps.setCapability("browser_version",browser_version);
-            caps.setCapability("os",os);
-            caps.setCapability("os_version",os_version);
 
-            java.net.URL browserURL=new URL(URL);
-            driver=new RemoteWebDriver(browserURL,caps);
-        }
-        else
-        {*/
-            System.setProperty("webdriver.chrome.driver","/Users/siddhirao/IdeaProjects/automateAssignments/src/main/resources/drivers/chromedriver");
-            // System.setProperty("webdriver.gecko.driver","/Users/siddhirao/IdeaProjects/automateAssignments/src/main/resources/drivers/geckodriver");
-            //   driver =new FirefoxDriver();
-            driver=new ChromeDriver();
-      //  }
-    }
-
-    @AfterTest
-    public void tearDown()
-    {
-        driver.quit();
-
-    }
 }

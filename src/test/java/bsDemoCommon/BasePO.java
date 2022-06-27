@@ -1,6 +1,5 @@
 package bsDemoCommon;
 
-import io.netty.handler.codec.rtsp.RtspHeaderValues;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPut;
@@ -30,6 +29,7 @@ import java.util.logging.Logger;
 public class BasePO {
     public static final Logger logger = Logger.getLogger(String.valueOf(BasePO.class));
     protected WebDriver driver;
+
     public BasePO(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -289,8 +289,8 @@ public class BasePO {
         driver.get(readPropertiesFile("browserStackURL"));
     }
 
-    public void signIn() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    public void signIn() throws InterruptedException {
+        Thread.sleep(3000);
         driver.manage().window().maximize();
         bsSignIn.click();
 
@@ -303,7 +303,7 @@ public class BasePO {
     }
 
     public void liveSession() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        Thread.sleep(3000);
         liveModule.click();
 
         assert(liveDashboard.isDisplayed()) :"Live dashboard is not launched!";
@@ -329,8 +329,8 @@ public class BasePO {
        return  new Random().nextInt(max - min + 1) + 1;
     }
 
-    public void liveWindowsBrowser() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+    public void liveWindowsBrowser() throws InterruptedException {
+        Thread.sleep(3000);
         logger.info("Selecting random Chrome browser");
         List<WebElement> chromeBrowser=driver.findElements(By.xpath("//*[@data-test-browser='chrome']//div[@role='listitem']"));
         int i=getRandomNum(chromeBrowser.size()-1,1);
@@ -341,8 +341,8 @@ public class BasePO {
         logger.info("launching browser....");
     }
 
-    public void liveSessionTesting() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+    public void liveSessionTesting() throws InterruptedException {
+        Thread.sleep(3000);
         try
         {
             if(liveSessionToolbar.isDisplayed())
