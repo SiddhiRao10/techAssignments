@@ -198,6 +198,7 @@ public class BasePO {
         searchBox.sendKeys(readPropertiesFile("amazonProductSearch"));
         searchListSelection();
         searchClick.click();
+        Thread.sleep(3000);
     }
 
     private void searchListSelection() throws InterruptedException {
@@ -251,12 +252,15 @@ public class BasePO {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,-750)", "");
         Select drpCountry = new Select(driver.findElement(By.id("s-result-sort-select")));
-        drpCountry.selectByVisibleText("Price: High to Low");
+        Thread.sleep(2000);
+        drpCountry.selectByIndex(1);
+        //drpCountry.selectByVisibleText("Price: High to Low");
         Thread.sleep(3000);
     }
 
     public int resultPage() throws InterruptedException {
 
+        Thread.sleep(5000);
         logger.info("Total product on final result page** " + filteredResult.getText());
 
         List<WebElement> productName = driver.findElements(By.xpath("//*[@class='s-result-item s-asin sg-col-0-of-12 sg-col-16-of-20 sg-col s-widget-spacing-small sg-col-12-of-16']//h2"));
@@ -270,10 +274,11 @@ public class BasePO {
             for (int i = 0; i < productName.size(); i++) {
 
                 logger.info("Product Name : " + productName.get(i).getText() + " **** " + " Product Price : " + productPrice.get(i).getText() + " ***** " + " Product Link : " + productLink.get(i).getAttribute("href"));
+                status=1;
             }
 
             Thread.sleep(3000);
-            status=1;
+
         } catch (Exception e) {
             logger.info(String.valueOf(e));
         }
