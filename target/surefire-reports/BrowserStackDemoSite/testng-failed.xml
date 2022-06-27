@@ -17,19 +17,4 @@
       <class name="bsDemoTest.stackDemoTest"/>
     </classes>
   </test> <!-- bsDemoTest-env2 -->
-  <test parallel="tests" name="bsDemoTest-env2(failed)">
-    <parameter name="environment" value="env2"/>
-    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
-    <classes>
-      <class name="bsDemoTest.stackDemoTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="searchProduct"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- bsDemoTest.stackDemoTest -->
-    </classes>
-  </test> <!-- bsDemoTest-env2(failed) -->
 </suite> <!-- Failed suite [BrowserStackDemoSite] -->

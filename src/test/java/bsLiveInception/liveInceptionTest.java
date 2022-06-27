@@ -3,6 +3,7 @@ package bsLiveInception;
 import bsDemoCommon.BasePO;
 import bsDemoCommon.BaseTest;
 import bsDemoCommon.BrowserStackTestNGTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class liveInceptionTest  extends BrowserStackTestNGTest {
@@ -10,9 +11,11 @@ public class liveInceptionTest  extends BrowserStackTestNGTest {
     }
 
     @Test
-    public void liveSession() throws InterruptedException {
+    @Parameters(value={"browser"})
+    public void liveSession(String environment) throws InterruptedException {
         BasePO po = new BasePO(this.driver);
 
+        logger.info(environment.toString());
         logger.info("*** Launching BrowserStack URL***");
         po.launchBrowserStackURL();
 
@@ -26,7 +29,7 @@ public class liveInceptionTest  extends BrowserStackTestNGTest {
         po.liveWindowsOS();
 
         logger.info("*** Select windows browser***");
-        po.liveWindowsBrowser();
+        po.liveWindowsBrowser(environment.toString());
 
         logger.info("*** Live Session testing on launched browser***");
         int status=po.liveSessionTesting();

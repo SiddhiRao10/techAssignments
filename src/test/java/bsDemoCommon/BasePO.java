@@ -1,35 +1,21 @@
 package bsDemoCommon;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPut;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.net.URL;
+
 import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.*;
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 public class BasePO {
     public static final Logger logger = Logger.getLogger(String.valueOf(BasePO.class));
     protected WebDriver driver;
-    int status;
+    int status=0;
     public BasePO(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -200,8 +186,10 @@ public class BasePO {
         return status;
     }
 
-    public void launchAmazonURL() {
+    public void launchAmazonURL() throws InterruptedException {
         driver.get(readPropertiesFile("amazonDemoURL"));
+        driver.manage().window().maximize();
+        Thread.sleep(3000);
     }
 
     public void amazonSearchProduct() throws InterruptedException {
@@ -285,10 +273,11 @@ public class BasePO {
             }
 
             Thread.sleep(3000);
+            status=1;
         } catch (Exception e) {
             logger.info(String.valueOf(e));
         }
-        status=1;
+
         return status;
     }
 
@@ -305,14 +294,12 @@ public class BasePO {
         bsUserPassword.sendKeys(readPropertiesFile("bsPassword"));
 
         bsUserSubmit.click();
-
-        driver.get("https://live.browserstack.com/");
     }
 
     public void liveSession() throws InterruptedException {
         Thread.sleep(3000);
-        liveModule.click();
-
+        driver.navigate().to("https://live.browserstack.com/");
+        Thread.sleep(4000);
         assert(liveDashboard.isDisplayed()) :"Live dashboard is not launched!";
         logger.info("Live dashboard is launched successfully.");
         Thread.sleep(3000);
@@ -320,14 +307,14 @@ public class BasePO {
 
     }
 
-    public void liveWindowsOS() {
+    public void liveWindowsOS() throws InterruptedException {
         logger.info(" Live windows OS");
         List<WebElement> windowsOS=driver.findElements(By.xpath("//*[@class='accordion__content']//div[@role=\"listitem\"]"));
         int max=windowsOS.size()-1;
         int i= getRandomNum(max,1);
         windowsOS.get(i).click(); //selected random windows OS
         logger.info("Selected windows OS ** "+ windowsOS.get(i).getText());
-
+        Thread.sleep(4000);
 
     }
     int max,min;
@@ -336,15 +323,24 @@ public class BasePO {
        return  new Random().nextInt(max - min + 1) + 1;
     }
 
-    public void liveWindowsBrowser() throws InterruptedException {
+    public void liveWindowsBrowser(String browser) throws InterruptedException {
         Thread.sleep(3000);
-        logger.info("Selecting random Chrome browser");
-        List<WebElement> chromeBrowser=driver.findElements(By.xpath("//*[@data-test-browser='chrome']//div[@role='listitem']"));
-        int i=getRandomNum(chromeBrowser.size()-1,1);
+        if(browser.equals("chrome")) {
+            logger.info("Selecting random Chrome browser");
+            List<WebElement> chromeBrowser = driver.findElements(By.xpath("//*[@data-test-browser='chrome']//div[@role='listitem']"));
+            int i = getRandomNum(chromeBrowser.size() - 1, 1);
 
-        logger.info("Selecting chrome browser version- " + chromeBrowser.get(i).getText());
-        chromeBrowser.get(i).click();
+            logger.info("Selecting chrome browser version- " + chromeBrowser.get(i).getText());
+            chromeBrowser.get(i).click();
+        }
+        else if(browser.equals("firefox")) {
+            logger.info("Selecting random firefox browser");
+            List<WebElement> firefoxBrowser = driver.findElements(By.xpath("//*[@data-test-browser='firefox']//div[@role='listitem']"));
+            int i = getRandomNum(firefoxBrowser.size() - 1, 1);
 
+            logger.info("Selecting firefox browser version- " + firefoxBrowser.get(i).getText());
+            firefoxBrowser.get(i).click();
+        }
         logger.info("launching browser....");
     }
 
@@ -352,12 +348,8 @@ public class BasePO {
         Thread.sleep(3000);
         try
         {
-            if(liveSessionToolbar.isDisplayed())
-            {
-
                 logger.info("Live session is established, browser is launched");
-
-               // Thread.sleep(9000);
+                Thread.sleep(10000);
                 WebElement ele=driver.findElement(By.xpath("//*[@class='toolbar__head__icon-collapse']"));
                 driver.findElement(By.xpath("//*[@class='toolbar__head__icon-collapse']")).click();
                 driver.findElement(By.xpath("//*[@id='settings']")).click();
@@ -371,7 +363,6 @@ public class BasePO {
                         .perform();
                 Thread.sleep(3000);
                 status=1;
-            }
         }
         catch(Exception e)
         {
@@ -387,7 +378,7 @@ public class BasePO {
             jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"passed\", \"reason\": \"Test Passed\"}}");
         }
         else
-            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"Failed\", \"reason\": \"Test Failed\"}}");
+            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"failed\", \"reason\": \"Test Failed\"}}");
 
     }
 }

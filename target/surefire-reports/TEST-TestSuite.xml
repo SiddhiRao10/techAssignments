@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="50.401" tests="5" errors="0" skipped="0" failures="3">
+<testsuite name="TestSuite" time="27.039" tests="5" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1.1+0"/>
@@ -39,7 +39,7 @@
     <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.8.6/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -P LiveInception"/>
     <property name="java.home" value="/opt/homebrew/Cellar/openjdk/18.0.1.1/libexec/openjdk.jdk/Contents/Home"/>
     <property name="apple.awt.application.name" value="Launcher"/>
     <property name="user.language" value="en"/>
@@ -58,13 +58,13 @@
     <property name="java.vendor.version" value="Homebrew"/>
     <property name="sun.stdout.encoding" value="US-ASCII"/>
   </properties>
-  <testcase name="searchProduct" classname="amazonProductSearch.productSearchTest" time="6.993">
-    <failure message="&#10;Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;&#10;System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 12.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 00af79a7c16b743ce5208d2cb49..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}&#10;Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316&#10;*** Element info: {Using=xpath, value=//*[@class=&apos;a-section a-spacing-small a-spacing-top-small&apos;]//span[contains(text(),&quot;result&quot;)]}" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+  <testcase name="searchProduct" classname="amazonProductSearch.productSearchTest" time="10.288">
+    <failure message="&#10;Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;&#10;System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 13.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 19G2021, safari:platformVersion: 10.15.6, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 2f213bc96e13be61d970cd7fb27..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}&#10;Session ID: 2f213bc96e13be61d970cd7fb279e7bb0fff5c83&#10;*** Element info: {Using=xpath, value=//*[@class=&apos;a-section a-spacing-small a-spacing-top-small&apos;]//span[contains(text(),&quot;result&quot;)]}" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 12.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 00af79a7c16b743ce5208d2cb49..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
-Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 13.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 19G2021, safari:platformVersion: 10.15.6, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 2f213bc96e13be61d970cd7fb27..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 2f213bc96e13be61d970cd7fb279e7bb0fff5c83
 *** Element info: {Using=xpath, value=//*[@class='a-section a-spacing-small a-spacing-top-small']//span[contains(text(),"result")]}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -81,37 +81,37 @@ Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy10.getText(Unknown Source)
-	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:240)
+	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:242)
 	at amazonProductSearch.productSearchTest.searchProduct(productSearchTest.java:23)
 </failure>
-    <system-err><![CDATA[Jun 27, 2022 5:37:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+    <system-err><![CDATA[Jun 27, 2022 5:55:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Jun 27, 2022 5:37:56 PM amazonProductSearch.productSearchTest searchProduct
+Jun 27, 2022 5:55:17 PM amazonProductSearch.productSearchTest searchProduct
 INFO: *** Launching amazon URL***
-Jun 27, 2022 5:37:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun 27, 2022 5:55:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Jun 27, 2022 5:37:56 PM amazonProductSearch.productSearchTest searchProduct
+Jun 27, 2022 5:55:17 PM amazonProductSearch.productSearchTest searchProduct
 INFO: *** Launching amazon URL***
-Jun 27, 2022 5:37:59 PM amazonProductSearch.productSearchTest searchProduct
+Jun 27, 2022 5:55:23 PM amazonProductSearch.productSearchTest searchProduct
 INFO: *** searching product on amazon***
-Jun 27, 2022 5:38:00 PM amazonProductSearch.productSearchTest searchProduct
+Jun 27, 2022 5:55:24 PM amazonProductSearch.productSearchTest searchProduct
 INFO: *** searching product on amazon***
-Jun 27, 2022 5:38:02 PM bsDemoCommon.BasePO searchListSelection
+Jun 27, 2022 5:55:27 PM bsDemoCommon.BasePO searchListSelection
 INFO: no search
-Jun 27, 2022 5:38:03 PM amazonProductSearch.productSearchTest searchProduct
+Jun 27, 2022 5:55:27 PM amazonProductSearch.productSearchTest searchProduct
 INFO: *** to verify search page filters
 ]]></system-err>
   </testcase>
-  <testcase name="searchProduct" classname="amazonProductSearch.productSearchTest" time="24.156"/>
-  <testcase name="liveSession" classname="bsLiveInception.liveInceptionTest" time="35.229">
-    <failure message="unknown error: cannot determine loading status&#10;from unknown error: unexpected command response&#10;  (Session info: chrome=103.0.5060.53)&#10;Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;&#10;System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: c2afac3d552f84d01fd857db806...}&#10;Session ID: c2afac3d552f84d01fd857db8066feb8d567aedc" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+  <testcase name="searchProduct" classname="amazonProductSearch.productSearchTest" time="27.876"/>
+  <testcase name="liveSession" classname="bsLiveInception.liveInceptionTest" time="11.546">
+    <failure message="unknown error: cannot determine loading status&#10;from unknown error: unexpected command response&#10;  (Session info: chrome=103.0.5060.53)&#10;Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;&#10;System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2115}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 9a5f92b07f24c5727a1cd0f906d...}&#10;Session ID: 9a5f92b07f24c5727a1cd0f906dbaed553c6b2c2" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
 from unknown error: unexpected command response
   (Session info: chrome=103.0.5060.53)
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: c2afac3d552f84d01fd857db806...}
-Session ID: c2afac3d552f84d01fd857db8066feb8d567aedc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2115}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 9a5f92b07f24c5727a1cd0f906d...}
+Session ID: 9a5f92b07f24c5727a1cd0f906dbaed553c6b2c2
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -120,70 +120,18 @@ Session ID: c2afac3d552f84d01fd857db8066feb8d567aedc
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-	at bsDemoCommon.BasePO.liveSession(BasePO.java:314)
-	at bsLiveInception.liveInceptionTest.liveSession(liveInceptionTest.java:23)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:271)
+	at bsDemoCommon.BasePO.signIn(BasePO.java:312)
+	at bsLiveInception.liveInceptionTest.liveSession(liveInceptionTest.java:20)
 </failure>
-    <system-err><![CDATA[Jun 27, 2022 5:38:26 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+    <system-err><![CDATA[Jun 27, 2022 5:55:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Jun 27, 2022 5:38:26 PM bsLiveInception.liveInceptionTest liveSession
+Jun 27, 2022 5:55:50 PM bsLiveInception.liveInceptionTest liveSession
 INFO: *** Launching BrowserStack URL***
-Jun 27, 2022 5:38:29 PM bsLiveInception.liveInceptionTest liveSession
+Jun 27, 2022 5:55:52 PM bsLiveInception.liveInceptionTest liveSession
 INFO: *** BrowserStack SignIn***
-Jun 27, 2022 5:38:52 PM bsLiveInception.liveInceptionTest liveSession
-INFO: *** BrowserStack Live Session***
 ]]></system-err>
   </testcase>
-  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="8.179">
-    <failure message="Element &lt;div class=&quot;buy-btn&quot;&gt; could not be scrolled into view&#10;Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;&#10;System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 101.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220526203855, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 4168, moz:profile: C:\Windows\proxy\rust_mozpr..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: e0b46cbc542625521cacb3a86e2...}&#10;Session ID: e0b46cbc542625521cacb3a86e299e9eb50bd3f2" type="org.openqa.selenium.ElementNotInteractableException"><![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <div class="buy-btn"> could not be scrolled into view
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 101.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220526203855, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 4168, moz:profile: C:\Windows\proxy\rust_mozpr..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: e0b46cbc542625521cacb3a86e2...}
-Session ID: e0b46cbc542625521cacb3a86e299e9eb50bd3f2
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-	at bsDemoCommon.BasePO.checkout(BasePO.java:169)
-	at bsDemoTest.stackDemoTest.searchProduct(stackDemoTest.java:29)
-]]></failure>
-    <system-err><![CDATA[Jun 27, 2022 5:39:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jun 27, 2022 5:39:11 PM bsDemoTest.stackDemoTest searchProduct
-INFO: *** Launching BS demo URL***
-Jun 27, 2022 5:39:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Jun 27, 2022 5:39:11 PM bsDemoTest.stackDemoTest searchProduct
-INFO: *** Launching BS demo URL***
-Jun 27, 2022 5:39:14 PM bsDemoTest.stackDemoTest searchProduct
-INFO: *** login *** 
-Jun 27, 2022 5:39:17 PM bsDemoTest.stackDemoTest searchProduct
-INFO: *** login *** 
-Jun 27, 2022 5:39:18 PM bsDemoTest.stackDemoTest searchProduct
-INFO: *** Search product and add to cart****
-Jun 27, 2022 5:39:18 PM bsDemoCommon.BasePO searchProductAddCart
-INFO: product found iPhone 12
-Jun 27, 2022 5:39:19 PM bsDemoTest.stackDemoTest searchProduct
-INFO: *** Search product and add to cart****
-Jun 27, 2022 5:39:19 PM bsDemoTest.stackDemoTest searchProduct
-INFO: *** checkout ***
-]]></system-err>
-  </testcase>
-  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="12.41"/>
+  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="5.205"/>
+  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="9.488"/>
 </testsuite>

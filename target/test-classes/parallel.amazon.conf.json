@@ -4,7 +4,7 @@
   "key": "7XEYboWHDzwViv4jSzaJ",
 
   "capabilities": {
-    "build": "automate_assignments",
+    "build": "AmazonProductSearch",
     "name": "amazonProductSearch",
     "browserstack.debug": true
   },

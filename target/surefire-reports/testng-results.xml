@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="5" passed="2" failed="3" skipped="0">
+<testng-results total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-27T12:07:51Z" name="AmazonProductSearchParallelTest" finished-at="2022-06-27T12:08:22Z" duration-ms="30330">
+  <suite started-at="2022-06-27T12:25:12Z" name="AmazonProductSearchParallelTest" finished-at="2022-06-27T12:25:46Z" duration-ms="34124">
     <groups>
     </groups>
-    <test started-at="2022-06-27T12:07:51Z" name="amazonProductSearch-env2" finished-at="2022-06-27T12:08:05Z" duration-ms="13410">
+    <test started-at="2022-06-27T12:25:12Z" name="amazonProductSearch-env2" finished-at="2022-06-27T12:25:29Z" duration-ms="16638">
       <class name="amazonProductSearch.productSearchTest">
-        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:amazonProductSearch.productSearchTest@50d0686]" started-at="2022-06-27T17:37:51Z" name="setUp" finished-at="2022-06-27T17:37:56Z" duration-ms="4383" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:amazonProductSearch.productSearchTest@50d0686]" started-at="2022-06-27T17:55:12Z" name="setUp" finished-at="2022-06-27T17:55:17Z" duration-ms="4615" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchProduct()[pri:0, instance:amazonProductSearch.productSearchTest@50d0686]" started-at="2022-06-27T17:37:56Z" name="searchProduct" finished-at="2022-06-27T17:38:03Z" duration-ms="7366" status="FAIL">
+        <test-method signature="searchProduct()[pri:0, instance:amazonProductSearch.productSearchTest@50d0686]" started-at="2022-06-27T17:55:17Z" name="searchProduct" finished-at="2022-06-27T17:55:27Z" duration-ms="10580" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 12.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 00af79a7c16b743ce5208d2cb49..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
-Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 13.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 19G2021, safari:platformVersion: 10.15.6, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 2f213bc96e13be61d970cd7fb27..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 2f213bc96e13be61d970cd7fb279e7bb0fff5c83
 *** Element info: {Using=xpath, value=//*[@class='a-section a-spacing-small a-spacing-top-small']//span[contains(text(),"result")]}]]>
             </message>
             <full-stacktrace>
@@ -39,8 +39,8 @@ Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 12.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 00af79a7c16b743ce5208d2cb49..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
-Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 13.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 19G2021, safari:platformVersion: 10.15.6, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 2f213bc96e13be61d970cd7fb27..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 2f213bc96e13be61d970cd7fb279e7bb0fff5c83
 *** Element info: {Using=xpath, value=//*[@class='a-section a-spacing-small a-spacing-top-small']//span[contains(text(),"result")]}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -57,7 +57,7 @@ Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy10.getText(Unknown Source)
-	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:240)
+	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:242)
 	at amazonProductSearch.productSearchTest.searchProduct(productSearchTest.java:23)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -83,15 +83,15 @@ Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:amazonProductSearch.productSearchTest@50d0686]" started-at="2022-06-27T17:38:03Z" name="tearDown" finished-at="2022-06-27T17:38:05Z" duration-ms="1650" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:amazonProductSearch.productSearchTest@50d0686]" started-at="2022-06-27T17:55:27Z" name="tearDown" finished-at="2022-06-27T17:55:29Z" duration-ms="1435" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- amazonProductSearch.productSearchTest -->
     </test> <!-- amazonProductSearch-env2 -->
-    <test started-at="2022-06-27T12:07:51Z" name="amazonProductSearch-env1" finished-at="2022-06-27T12:08:22Z" duration-ms="30330">
+    <test started-at="2022-06-27T12:25:12Z" name="amazonProductSearch-env1" finished-at="2022-06-27T12:25:46Z" duration-ms="34124">
       <class name="amazonProductSearch.productSearchTest">
-        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:amazonProductSearch.productSearchTest@6b9651f3]" started-at="2022-06-27T17:37:51Z" name="setUp" finished-at="2022-06-27T17:37:56Z" duration-ms="4763" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:amazonProductSearch.productSearchTest@6b9651f3]" started-at="2022-06-27T17:55:12Z" name="setUp" finished-at="2022-06-27T17:55:17Z" duration-ms="4919" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -107,23 +107,51 @@ Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchProduct()[pri:0, instance:amazonProductSearch.productSearchTest@6b9651f3]" started-at="2022-06-27T17:37:56Z" name="searchProduct" finished-at="2022-06-27T17:38:20Z" duration-ms="24156" status="PASS">
+        <test-method signature="searchProduct()[pri:0, instance:amazonProductSearch.productSearchTest@6b9651f3]" started-at="2022-06-27T17:55:17Z" name="searchProduct" finished-at="2022-06-27T17:55:45Z" duration-ms="27874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:amazonProductSearch.productSearchTest@6b9651f3]" started-at="2022-06-27T17:38:20Z" name="tearDown" finished-at="2022-06-27T17:38:22Z" duration-ms="1405" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:amazonProductSearch.productSearchTest@6b9651f3]" started-at="2022-06-27T17:55:45Z" name="tearDown" finished-at="2022-06-27T17:55:46Z" duration-ms="1327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- amazonProductSearch.productSearchTest -->
     </test> <!-- amazonProductSearch-env1 -->
   </suite> <!-- AmazonProductSearchParallelTest -->
-  <suite started-at="2022-06-27T12:09:02Z" name="BrowserStackDemoSite" finished-at="2022-06-27T12:09:25Z" duration-ms="22538">
+  <suite started-at="2022-06-27T12:26:03Z" name="BrowserStackDemoSite" finished-at="2022-06-27T12:26:24Z" duration-ms="20410">
     <groups>
     </groups>
-    <test started-at="2022-06-27T12:09:02Z" name="bsDemoTest-env2" finished-at="2022-06-27T12:09:21Z" duration-ms="18346">
+    <test started-at="2022-06-27T12:26:03Z" name="bsDemoTest-env1" finished-at="2022-06-27T12:26:19Z" duration-ms="15757">
       <class name="bsDemoTest.stackDemoTest">
-        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:bsDemoTest.stackDemoTest@74ad1f1f]" started-at="2022-06-27T17:39:02Z" name="setUp" finished-at="2022-06-27T17:39:11Z" duration-ms="8289" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:bsDemoTest.stackDemoTest@612fc6eb]" started-at="2022-06-27T17:56:03Z" name="setUp" finished-at="2022-06-27T17:56:08Z" duration-ms="4412" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[parallel.bsDemoTest.conf.json]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[env1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct()[pri:0, instance:bsDemoTest.stackDemoTest@612fc6eb]" started-at="2022-06-27T17:56:08Z" name="searchProduct" finished-at="2022-06-27T17:56:18Z" duration-ms="10050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:bsDemoTest.stackDemoTest@612fc6eb]" started-at="2022-06-27T17:56:18Z" name="tearDown" finished-at="2022-06-27T17:56:19Z" duration-ms="1295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- bsDemoTest.stackDemoTest -->
+    </test> <!-- bsDemoTest-env1 -->
+    <test started-at="2022-06-27T12:26:03Z" name="bsDemoTest-env2" finished-at="2022-06-27T12:26:24Z" duration-ms="20410">
+      <class name="bsDemoTest.stackDemoTest">
+        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:bsDemoTest.stackDemoTest@74ad1f1f]" started-at="2022-06-27T17:56:03Z" name="setUp" finished-at="2022-06-27T17:56:12Z" duration-ms="9257" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -139,104 +167,23 @@ Session ID: 00af79a7c16b743ce5208d2cb4942869d1446316
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchProduct()[pri:0, instance:bsDemoTest.stackDemoTest@74ad1f1f]" started-at="2022-06-27T17:39:11Z" name="searchProduct" finished-at="2022-06-27T17:39:19Z" duration-ms="8459" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[Element <div class="buy-btn"> could not be scrolled into view
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 101.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220526203855, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 4168, moz:profile: C:\Windows\proxy\rust_mozpr..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: e0b46cbc542625521cacb3a86e2...}
-Session ID: e0b46cbc542625521cacb3a86e299e9eb50bd3f2]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <div class="buy-btn"> could not be scrolled into view
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 101.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220526203855, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 4168, moz:profile: C:\Windows\proxy\rust_mozpr..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: e0b46cbc542625521cacb3a86e2...}
-Session ID: e0b46cbc542625521cacb3a86e299e9eb50bd3f2
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-	at bsDemoCommon.BasePO.checkout(BasePO.java:169)
-	at bsDemoTest.stackDemoTest.searchProduct(stackDemoTest.java:29)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
-	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="searchProduct()[pri:0, instance:bsDemoTest.stackDemoTest@74ad1f1f]" started-at="2022-06-27T17:56:12Z" name="searchProduct" finished-at="2022-06-27T17:56:22Z" duration-ms="9488" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:bsDemoTest.stackDemoTest@74ad1f1f]" started-at="2022-06-27T17:39:19Z" name="tearDown" finished-at="2022-06-27T17:39:21Z" duration-ms="1594" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:bsDemoTest.stackDemoTest@74ad1f1f]" started-at="2022-06-27T17:56:22Z" name="tearDown" finished-at="2022-06-27T17:56:24Z" duration-ms="1662" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- bsDemoTest.stackDemoTest -->
     </test> <!-- bsDemoTest-env2 -->
-    <test started-at="2022-06-27T12:09:02Z" name="bsDemoTest-env1" finished-at="2022-06-27T12:09:25Z" duration-ms="22538">
-      <class name="bsDemoTest.stackDemoTest">
-        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:bsDemoTest.stackDemoTest@612fc6eb]" started-at="2022-06-27T17:39:02Z" name="setUp" finished-at="2022-06-27T17:39:11Z" duration-ms="8572" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[parallel.bsDemoTest.conf.json]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[env1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="searchProduct()[pri:0, instance:bsDemoTest.stackDemoTest@612fc6eb]" started-at="2022-06-27T17:39:11Z" name="searchProduct" finished-at="2022-06-27T17:39:23Z" duration-ms="12409" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:bsDemoTest.stackDemoTest@612fc6eb]" started-at="2022-06-27T17:39:23Z" name="tearDown" finished-at="2022-06-27T17:39:25Z" duration-ms="1556" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- bsDemoTest.stackDemoTest -->
-    </test> <!-- bsDemoTest-env1 -->
   </suite> <!-- BrowserStackDemoSite -->
-  <suite started-at="2022-06-27T12:08:22Z" name="LiveInception" finished-at="2022-06-27T12:09:02Z" duration-ms="40874">
+  <suite started-at="2022-06-27T12:25:46Z" name="LiveInception" finished-at="2022-06-27T12:26:03Z" duration-ms="16853">
     <groups>
     </groups>
-    <test started-at="2022-06-27T12:08:22Z" name="bsLiveTest-env1" finished-at="2022-06-27T12:09:02Z" duration-ms="40874">
+    <test started-at="2022-06-27T12:25:46Z" name="bsLiveTest-env1" finished-at="2022-06-27T12:26:03Z" duration-ms="16853">
       <class name="bsLiveInception.liveInceptionTest">
-        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:bsLiveInception.liveInceptionTest@3aeaafa6]" started-at="2022-06-27T17:38:22Z" name="setUp" finished-at="2022-06-27T17:38:26Z" duration-ms="4218" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:bsLiveInception.liveInceptionTest@3aeaafa6]" started-at="2022-06-27T17:55:46Z" name="setUp" finished-at="2022-06-27T17:55:50Z" duration-ms="3790" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -252,7 +199,7 @@ Session ID: e0b46cbc542625521cacb3a86e299e9eb50bd3f2
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="liveSession()[pri:0, instance:bsLiveInception.liveInceptionTest@3aeaafa6]" started-at="2022-06-27T17:38:26Z" name="liveSession" finished-at="2022-06-27T17:39:01Z" duration-ms="35226" status="FAIL">
+        <test-method signature="liveSession()[pri:0, instance:bsLiveInception.liveInceptionTest@3aeaafa6]" started-at="2022-06-27T17:55:50Z" name="liveSession" finished-at="2022-06-27T17:56:02Z" duration-ms="11540" status="FAIL">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[unknown error: cannot determine loading status
@@ -261,8 +208,8 @@ from unknown error: unexpected command response
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: c2afac3d552f84d01fd857db806...}
-Session ID: c2afac3d552f84d01fd857db8066feb8d567aedc]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2115}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 9a5f92b07f24c5727a1cd0f906d...}
+Session ID: 9a5f92b07f24c5727a1cd0f906dbaed553c6b2c2]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
@@ -271,8 +218,8 @@ from unknown error: unexpected command response
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2091}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: c2afac3d552f84d01fd857db806...}
-Session ID: c2afac3d552f84d01fd857db8066feb8d567aedc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2115}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 9a5f92b07f24c5727a1cd0f906d...}
+Session ID: 9a5f92b07f24c5727a1cd0f906dbaed553c6b2c2
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -281,14 +228,9 @@ Session ID: c2afac3d552f84d01fd857db8066feb8d567aedc
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-	at bsDemoCommon.BasePO.liveSession(BasePO.java:314)
-	at bsLiveInception.liveInceptionTest.liveSession(liveInceptionTest.java:23)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:271)
+	at bsDemoCommon.BasePO.signIn(BasePO.java:312)
+	at bsLiveInception.liveInceptionTest.liveSession(liveInceptionTest.java:20)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
@@ -313,7 +255,7 @@ Session ID: c2afac3d552f84d01fd857db8066feb8d567aedc
           <reporter-output>
           </reporter-output>
         </test-method> <!-- liveSession -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:bsLiveInception.liveInceptionTest@3aeaafa6]" started-at="2022-06-27T17:39:01Z" name="tearDown" finished-at="2022-06-27T17:39:02Z" duration-ms="1428" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:bsLiveInception.liveInceptionTest@3aeaafa6]" started-at="2022-06-27T17:56:02Z" name="tearDown" finished-at="2022-06-27T17:56:03Z" duration-ms="1517" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

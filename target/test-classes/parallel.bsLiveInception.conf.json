@@ -12,6 +12,9 @@
   "environments": {
     "env1": {
       "browser": "chrome"
+    },
+    "env2": {
+      "browser": "firefox"
     }
   }
 }
