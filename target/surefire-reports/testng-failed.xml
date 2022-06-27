@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [LiveInception]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="3" parallel="tests" name="bsLiveTest-env1(failed)" verbose="0">
-    <parameter name="environment" value="env1"/>
-    <parameter name="config" value="parallel.bsLiveInception.conf.json"/>
+<suite thread-count="3" parallel="tests" name="Failed suite [AmazonProductSearchParallelTest]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="3" parallel="tests" name="amazonProductSearch-env2(failed)" verbose="0">
+    <parameter name="environment" value="env2"/>
+    <parameter name="config" value="parallel.amazon.conf.json"/>
     <classes>
-      <class name="bsLiveInception.liveInceptionTest">
+      <class name="amazonProductSearch.productSearchTest">
         <methods>
+          <include name="searchProduct"/>
           <include name="setUp"/>
-          <include name="liveSession"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- bsLiveInception.liveInceptionTest -->
+      </class> <!-- amazonProductSearch.productSearchTest -->
     </classes>
-  </test> <!-- bsLiveTest-env1(failed) -->
-</suite> <!-- Failed suite [LiveInception] -->
+  </test> <!-- amazonProductSearch-env2(failed) -->
+</suite> <!-- Failed suite [AmazonProductSearchParallelTest] -->

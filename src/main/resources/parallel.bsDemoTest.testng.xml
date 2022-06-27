@@ -16,12 +16,4 @@
             <class name="bsDemoTest.stackDemoTest"/>
         </classes>
     </test>
-
-    <test name="bsDemoTest-env3">
-        <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
-        <parameter name="environment" value="env3"/>
-        <classes>
-            <class name="bsDemoTest.stackDemoTest"/>
-        </classes>
-    </test>
 </suite>

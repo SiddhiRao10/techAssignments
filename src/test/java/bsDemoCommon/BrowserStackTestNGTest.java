@@ -62,6 +62,7 @@ public class BrowserStackTestNGTest {
             }
 
 
+
             if (username == null) {
                 username = (String) config.get("user");
             }

@@ -11,14 +11,18 @@
 
   "environments": {
     "env1": {
-      "browser": "chrome"
+      "browser": "chrome",
+      "os": "Windows",
+      "osVersion": "10",
+      "local": "false",
+      "seleniumVersion": "4.0.0"
     },
     "env2": {
-      "browser": "firefox"
-    },
-    "env3": {
-      "os": "OS X",
-      "browser": "safari"
+      "browser": "firefox",
+      "os": "Windows",
+      "osVersion": "10",
+      "local": "false",
+      "seleniumVersion": "4.0.0"
     }
   }
 }
