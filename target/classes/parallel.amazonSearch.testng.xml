@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="AmazonProductSearchParallelTest" thread-count="3" parallel="tests">
-    <test name="amazonProductSearch-env1">
+ <!--   <test name="amazonProductSearch-chrome">
         <parameter name="config" value="parallel.amazon.conf.json"/>
         <parameter name="environment" value="env1"/>
         <classes>
@@ -9,9 +9,24 @@
         </classes>
     </test>
 
-    <test name="amazonProductSearch-env2">
+    <test name="amazonProductSearch-safari">
         <parameter name="config" value="parallel.amazon.conf.json"/>
         <parameter name="environment" value="env2"/>
+        <classes>
+            <class name="amazonProductSearch.productSearchTest"/>
+        </classes>
+    </test>
+
+    <test name="amazonProductSearch-firefox">
+        <parameter name="config" value="parallel.amazon.conf.json"/>
+        <parameter name="environment" value="env3"/>
+        <classes>
+            <class name="amazonProductSearch.productSearchTest"/>
+        </classes>
+    </test> -->
+    <test name="amazonProductSearch-android">
+        <parameter name="config" value="parallel.amazon.conf.json"/>
+        <parameter name="environment" value="env4"/>
         <classes>
             <class name="amazonProductSearch.productSearchTest"/>
         </classes>

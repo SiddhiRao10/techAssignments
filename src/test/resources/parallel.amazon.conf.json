@@ -13,10 +13,11 @@
     "env1": {
       "browser": "chrome"
     },
-
     "env2": {
-      "os": "OS X",
       "browser": "safari"
+    },
+    "env3": {
+      "browser": "firefox"
     }
   }
 }

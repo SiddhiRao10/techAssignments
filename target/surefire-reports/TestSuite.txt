@@ -1,51 +1,30 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 71.584 sec <<< FAILURE! - in TestSuite
-searchProduct(amazonProductSearch.productSearchTest)  Time elapsed: 10.288 sec  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 41.08 sec <<< FAILURE! - in TestSuite
+searchProduct(bsDemoTest.stackDemoTest)  Time elapsed: 4.411 sec  <<< FAILURE!
+org.openqa.selenium.InvalidElementStateException: Error Domain=com.facebook.WebDriverAgent Code=1 "The on-screen keyboard must be present to send keys" UserInfo={NSLocalizedDescription=The on-screen keyboard must be present to send keys} (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
+System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:4181:2060:f508:40ae%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 13.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 19G2021, safari:platformVersion: 10.15.6, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 2f213bc96e13be61d970cd7fb27..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
-Session ID: 2f213bc96e13be61d970cd7fb279e7bb0fff5c83
-*** Element info: {Using=xpath, value=//*[@class='a-section a-spacing-small a-spacing-top-small']//span[contains(text(),"result")]}
+Capabilities {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCUITest, bootstrapPath: /usr/local/.browserstack/co..., browser: iphone, browserName: safari, browserstack.appium_version: 1.17.0, browserstack.isTargetBased: true, browserstack.is_hub_canary: false, buildName: BrowserStackDemoSiteAssignment, capabilities: {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCUITest, bootstrapPath: /usr/local/.browserstack/co..., browser: iphone, browserName: safari, browserstack.appium_version: 1.17.0, browserstack.isTargetBased: true, browserstack.is_hub_canary: false, buildName: BrowserStackDemoSiteAssignment, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.12.0 (java mac), device: iphone, deviceName: iPhone 12, deviceOrientation: PORTRAIT, javascriptEnabled: true, keychainPassword: [REDACTED VALUE], keychainPath: [REDACTED VALUE], locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 12-14.4}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 14, os_version: 14.0, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: 2f96f1d79d6078d24334e3133f0..., sessionName: bsDemoTest_parallel, takesScreenshot: true, udid: 00008101-000D50DC0CE9003A, useXctestrunFile: true, version: , wda_port: 8402, webStorageEnabled: false, webkitResponseTimeout: 20000}, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.12.0 (java mac), device: iphone, deviceName: iPhone 12, deviceOrientation: PORTRAIT, javascriptEnabled: true, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 12-14.4}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 14, os_version: 14.0, platform: MAC, platformName: MAC, platformVersion: 14.1, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: 2f96f1d79d6078d24334e3133f0..., sessionName: bsDemoTest_parallel, takesScreenshot: true, udid: 00008101-000D50DC0CE9003A, useXctestrunFile: true, version: , wda_port: 8402, webStorageEnabled: false, webkitResponseTimeout: 20000}
+Session ID: 2f96f1d79d6078d24334e3133f0df32b3464251a
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy10.getText(Unknown Source)
-	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:242)
-	at amazonProductSearch.productSearchTest.searchProduct(productSearchTest.java:23)
-
-liveSession(bsLiveInception.liveInceptionTest)  Time elapsed: 11.546 sec  <<< FAILURE!
-org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.53)
-Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
-System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f057:8931:8ed7:7925%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Windows\proxy\scoped_dir...}, goog:chromeOptions: {debuggerAddress: localhost:2115}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 9a5f92b07f24c5727a1cd0f906d...}
-Session ID: 9a5f92b07f24c5727a1cd0f906dbaed553c6b2c2
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:271)
-	at bsDemoCommon.BasePO.signIn(BasePO.java:312)
-	at bsLiveInception.liveInceptionTest.liveSession(liveInceptionTest.java:20)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
+	at org.openqa.selenium.remote.RemoteKeyboard.sendKeys(RemoteKeyboard.java:38)
+	at org.openqa.selenium.interactions.SendKeysAction.perform(SendKeysAction.java:57)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:36)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:641)
+	at bsDemoCommon.BasePO.login(BasePO.java:146)
+	at bsDemoTest.stackDemoTest.searchProduct(stackDemoTest.java:23)
 

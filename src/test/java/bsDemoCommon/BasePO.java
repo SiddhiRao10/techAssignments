@@ -144,7 +144,7 @@ public class BasePO {
         username.click();
         Actions act = new Actions(driver);
         act.sendKeys("demouser"+Keys.TAB).build().perform();
-
+        Thread.sleep(2000);
         password.click();
         act.sendKeys("testingisfun99"+Keys.TAB).build().perform();
 
@@ -228,7 +228,7 @@ public class BasePO {
 
         logger.info("**** total searched result before filter apply*** "+ searchedResult.getText() +"iPhone X");
         logger.info("Selecting Cell Phone Operating System filter");
-        osFilter();
+     //   osFilter();
         logger.info("Selecting price filter");
         sortPrice();
     }
@@ -236,7 +236,7 @@ public class BasePO {
     private void osFilter() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,750)", "");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         try {
             if(osFilter.isDisplayed()) {
                 osFilter.click();
@@ -250,7 +250,8 @@ public class BasePO {
     private void sortPrice() throws InterruptedException {
         Thread.sleep(3000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,-750)", "");
+       // js.executeScript("window.scrollBy(0,-750)", "");
+        //Thread.sleep(2000);
         Select drpCountry = new Select(driver.findElement(By.id("s-result-sort-select")));
         Thread.sleep(2000);
         drpCountry.selectByIndex(1);

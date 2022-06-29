@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BrowserStackDemoSite" thread-count="3" parallel="tests">
-    <test name="bsDemoTest-env1">
+<suite name="BrowserStackDemoSite" thread-count="5" parallel="tests">
+  <test name="bsDemoTest-chrome">
         <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
         <parameter name="environment" value="env1"/>
         <classes>
             <class name="bsDemoTest.stackDemoTest"/>
         </classes>
     </test>
-
-    <test name="bsDemoTest-env2">
+    <test name="bsDemoTest-firefox">
         <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
         <parameter name="environment" value="env2"/>
+        <classes>
+            <class name="bsDemoTest.stackDemoTest"/>
+        </classes>
+    </test>
+    <test name="bsDemoTest-safari">
+        <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+        <parameter name="environment" value="env3"/>
+        <classes>
+            <class name="bsDemoTest.stackDemoTest"/>
+        </classes>
+    </test>
+    <test name="bsDemoTest-android">
+        <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+        <parameter name="environment" value="env4"/>
+        <classes>
+            <class name="bsDemoTest.stackDemoTest"/>
+        </classes>
+    </test>
+    <test name="bsDemoTest-iOS">
+        <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+        <parameter name="environment" value="env5"/>
         <classes>
             <class name="bsDemoTest.stackDemoTest"/>
         </classes>

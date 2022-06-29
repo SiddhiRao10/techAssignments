@@ -15,14 +15,27 @@
       "os": "Windows",
       "osVersion": "10",
       "local": "false",
-      "seleniumVersion": "4.0.0"
     },
     "env2": {
       "browser": "firefox",
       "os": "Windows",
       "osVersion": "10",
       "local": "false",
-      "seleniumVersion": "4.0.0"
+    },
+    "env3": {
+      "browser": "Safari",
+      "os": "OS X",
+      "osVersion": "Big Sur",
+      "local": "false",
+    },
+    "env4": {
+      "browser": "chrome",
+      "osVersion": "10.0",
+      "deviceName": "Samsung Galaxy S20"
+    },
+    "env5": {
+      "osVersion": "14",
+      "deviceName": "iPhone 12"
     }
   }
 }

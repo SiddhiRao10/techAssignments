@@ -23,7 +23,8 @@ public class productSearchTest extends BrowserStackTestNGTest {
         po.searchedPageFilter();
 
         logger.info("searched result page");
-        int status= po.resultPage();
+        int status=0;
+        status= po.resultPage();
 
         logger.info("test status");
         po.testStatus(status);
