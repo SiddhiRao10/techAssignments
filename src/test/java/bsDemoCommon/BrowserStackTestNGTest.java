@@ -26,6 +26,7 @@ public class BrowserStackTestNGTest {
     String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
     public String bsdemousername = System.getenv("BROWSERSTACK_DEMO_SITE_USERNAME");
     public String bsdemopassword = System.getenv("BROWSERSTACK_DEMO_SITE_PASSWORD");
+    String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
 
     @SuppressWarnings("unchecked")
     @BeforeMethod(alwaysRun = true)
@@ -50,6 +51,7 @@ public class BrowserStackTestNGTest {
                 Map.Entry pair = (Map.Entry) it.next();
                 if (capabilities.getCapability(pair.getKey().toString()) == null) {
                     capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
+                    capabilities.setCapability("build", buildName);
                 }
             }
             if (username == null) {
