@@ -6,7 +6,10 @@
   "capabilities": {
     "build": "AmazonProductSearch",
     "name": "amazonProductSearch",
-    "browserstack.debug": true
+    "browserstack.debug": true,
+    "browserstack.maskCommands": "sendType, sendPress, setHTTPCredentials, setStorageState, setGeolocation",
+    "browserstack.networkLogs": true,
+    "browserstack.geoLocation": "IN"
   },
 
   "environments": {

@@ -24,23 +24,6 @@
       <class name="amazonProductSearch.productSearchTest"/>
     </classes>
   </test> <!-- amazonProductSearch-firefox -->
-  <test parallel="tests" name="amazonProductSearch-firefox(failed)">
-    <parameter name="environment" value="env3"/>
-    <parameter name="config" value="parallel.amazon.conf.json"/>
-    <classes>
-      <class name="amazonProductSearch.productSearchTest">
-        <methods>
-          <include name="searchProduct"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- amazonProductSearch.productSearchTest -->
-    </classes>
-  </test> <!-- amazonProductSearch-firefox(failed) -->
   <test parallel="tests" name="amazonProductSearch-safari(failed)">
     <parameter name="environment" value="env2"/>
     <parameter name="config" value="parallel.amazon.conf.json"/>
@@ -58,4 +41,21 @@
       </class> <!-- amazonProductSearch.productSearchTest -->
     </classes>
   </test> <!-- amazonProductSearch-safari(failed) -->
+  <test parallel="tests" name="amazonProductSearch-firefox(failed)">
+    <parameter name="environment" value="env3"/>
+    <parameter name="config" value="parallel.amazon.conf.json"/>
+    <classes>
+      <class name="amazonProductSearch.productSearchTest">
+        <methods>
+          <include name="searchProduct"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- amazonProductSearch.productSearchTest -->
+    </classes>
+  </test> <!-- amazonProductSearch-firefox(failed) -->
 </suite> <!-- Failed suite [AmazonProductSearchParallelTest] -->

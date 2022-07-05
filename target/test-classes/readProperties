@@ -1,7 +1,5 @@
 bStackDemoURL=https://bstackdemo.com/
 productSearch=iPhone 12
-browserStackUserName=siddhirao_EFftXN
-browserStackPassword=7XEYboWHDzwViv4jSzaJ
 runOn=BrowserStack
 shippingFirstName=Siddhi
 shippingLastName=Rao
@@ -11,5 +9,5 @@ shippingPostalCode=401105
 amazonDemoURL=https://www.amazon.in/
 amazonProductSearch=iPhone X
 browserStackURL=https://www.browserstack.com/
-bsUsername=siddhi.r+demo@browserstack.com
-bsPassword=Siddemo@1234
+bsusername=siddhi.r+demo@browserstack.com
+baspassword=Siddemo@1234

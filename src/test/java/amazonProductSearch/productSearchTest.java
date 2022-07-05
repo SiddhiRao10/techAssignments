@@ -1,7 +1,6 @@
 package amazonProductSearch;
 
 import bsDemoCommon.BasePO;
-import bsDemoCommon.BaseTest;
 import bsDemoCommon.BrowserStackTestNGTest;
 import org.testng.annotations.Test;
 
@@ -23,10 +22,8 @@ public class productSearchTest extends BrowserStackTestNGTest {
         po.searchedPageFilter();
 
         logger.info("searched result page");
-        int status=0;
-        status= po.resultPage();
+        po.resultPage();
 
         logger.info("test status");
-        po.testStatus(status);
     }
 }

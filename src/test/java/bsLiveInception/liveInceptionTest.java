@@ -1,7 +1,6 @@
 package bsLiveInception;
 
 import bsDemoCommon.BasePO;
-import bsDemoCommon.BaseTest;
 import bsDemoCommon.BrowserStackTestNGTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -32,10 +31,9 @@ public class liveInceptionTest  extends BrowserStackTestNGTest {
         po.liveWindowsBrowser(environment.toString());
 
         logger.info("*** Live Session testing on launched browser***");
-        int status=po.liveSessionTesting();
+        po.liveSessionTesting();
 
         logger.info("test status");
-        po.testStatus(status);
 
     }
 }

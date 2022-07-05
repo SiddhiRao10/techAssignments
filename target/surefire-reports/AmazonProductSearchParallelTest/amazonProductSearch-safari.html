@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jun 29 11:21:48 IST 2022</td>
+<td>Started on:</td><td>Tue Jul 05 18:34:50 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>29 seconds (29155 ms)</td>
+<tr><td>Total time:</td><td>29 seconds (29610 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,35 +76,39 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='amazonProductSearch.productSearchTest.searchProduct()'><b>searchProduct</b><br>Test class: amazonProductSearch.productSearchTest</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;select id=&quot;s-result-sort-select&quot; class=&quot;a-native-dropdown a-declarative&quot; name=&quot;s&quot;&gt; is not clickable at point (1634,21) because another element &lt;span id=&quot;nav-link-accountList-nav-line-1&quot; class=&quot;nav-line-1 nav-progressive-content&quot;&gt; obscures it
+<td><div><pre>org.openqa.selenium.WebDriverException: 
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:4181:2060:f508:40ae%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;
+System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:b4b4:6c3f:256b:e1df%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 101.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220526203855, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 6480, moz:profile: C:\Windows\proxy\rust_mozpr..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 6.2, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 10e20712d3a922c57fb5f49e9a0...}
-Session ID: 10e20712d3a922c57fb5f49e9a0b5b630aa82cf6
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 13.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 19G2021, safari:platformVersion: 10.15.6, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 28dbbc7f6938870b6347a9cc0c4..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 28dbbc7f6938870b6347a9cc0c43abc525e504bb
+*** Element info: {Using=xpath, value=//*[@class=&apos;a-section a-spacing-small a-spacing-top-small&apos;]//span[contains(text(),&quot;result&quot;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:179)
-	at bsDemoCommon.BasePO.sortPrice(BasePO.java:256)
-	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:233)
-	at amazonProductSearch.productSearchTest.searchProduct(productSearchTest.java:23)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.getText(Unknown Source)
+	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:225)
+	at amazonProductSearch.productSearchTest.searchProduct(productSearchTest.java:22)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace377116996", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace377116996'><pre>org.openqa.selenium.ElementClickInterceptedException: Element &lt;select id=&quot;s-result-sort-select&quot; class=&quot;a-native-dropdown a-declarative&quot; name=&quot;s&quot;&gt; is not clickable at point (1634,21) because another element &lt;span id=&quot;nav-link-accountList-nav-line-1&quot; class=&quot;nav-line-1 nav-progressive-content&quot;&gt; obscures it
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace337257392", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace337257392'><pre>org.openqa.selenium.WebDriverException: 
 Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
-System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:4181:2060:f508:40ae%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;
+System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:b4b4:6c3f:256b:e1df%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 101.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220526203855, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:processID: 6480, moz:profile: C:\Windows\proxy\rust_mozpr..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 6.2, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: 10e20712d3a922c57fb5f49e9a0...}
-Session ID: 10e20712d3a922c57fb5f49e9a0b5b630aa82cf6
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 13.1.2, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 19G2021, safari:platformVersion: 10.15.6, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webdriver.remote.sessionid: 28dbbc7f6938870b6347a9cc0c4..., webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 28dbbc7f6938870b6347a9cc0c43abc525e504bb
+*** Element info: {Using=xpath, value=//*[@class=&apos;a-section a-spacing-small a-spacing-top-small&apos;]//span[contains(text(),&quot;result&quot;)]}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -113,13 +117,15 @@ Session ID: 10e20712d3a922c57fb5f49e9a0b5b630aa82cf6
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
-	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:179)
-	at bsDemoCommon.BasePO.sortPrice(BasePO.java:256)
-	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:233)
-	at amazonProductSearch.productSearchTest.searchProduct(productSearchTest.java:23)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.getText(Unknown Source)
+	at bsDemoCommon.BasePO.searchedPageFilter(BasePO.java:225)
+	at amazonProductSearch.productSearchTest.searchProduct(productSearchTest.java:22)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
@@ -139,8 +145,8 @@ Session ID: 10e20712d3a922c57fb5f49e9a0b5b630aa82cf6
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>22</td>
-<td>amazonProductSearch.productSearchTest@13c27452</td></tr>
+<td>20</td>
+<td>amazonProductSearch.productSearchTest@262b2c86</td></tr>
 </table><p>
 </body>
 </html>

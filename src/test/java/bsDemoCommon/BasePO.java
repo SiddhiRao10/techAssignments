@@ -5,7 +5,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.*;
 import java.util.*;
@@ -15,7 +17,6 @@ import java.util.logging.Logger;
 public class BasePO {
     public static final Logger logger = Logger.getLogger(String.valueOf(BasePO.class));
     protected WebDriver driver;
-    int status=0;
     public BasePO(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -104,7 +105,7 @@ public class BasePO {
         Properties prop= new Properties();
         try
         {
-            prop.load(new FileInputStream(System.getProperty("user.dir")+ File.separator+"src"+File.separator+"main"+File.separator+"java"+File.separator+"readProperties"));
+            prop.load(new FileInputStream(System.getProperty("user.dir")+ File.separator+"src"+File.separator+"test"+File.separator+"resources"+File.separator+ "readProperties"));
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -171,19 +172,16 @@ public class BasePO {
             logger.info("Shipping address details screen is not shown");
     }
 
-    public int orderStatus() {
+    public void orderStatus() {
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         if(orderStatus.isDisplayed()) {
             if(orderStatus.getText().equals("Your Order has been successfully placed.")) {
                 logger.info("Your Order has been successfully placed.");
-                status = 1;
             }
         }
         else {
             logger.info("order has not been placed successfully");
-            status=0;
         }
-        return status;
     }
 
     public void launchAmazonURL() throws InterruptedException {
@@ -193,12 +191,10 @@ public class BasePO {
     }
 
     public void amazonSearchProduct() throws InterruptedException {
-        Thread.sleep(3000);
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         searchBox.sendKeys(readPropertiesFile("amazonProductSearch"));
         searchListSelection();
         searchClick.click();
-        Thread.sleep(3000);
     }
 
     private void searchListSelection() throws InterruptedException {
@@ -250,18 +246,13 @@ public class BasePO {
     private void sortPrice() throws InterruptedException {
         Thread.sleep(3000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
-       // js.executeScript("window.scrollBy(0,-750)", "");
-        //Thread.sleep(2000);
         Select drpCountry = new Select(driver.findElement(By.id("s-result-sort-select")));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         drpCountry.selectByIndex(1);
-        //drpCountry.selectByVisibleText("Price: High to Low");
-        Thread.sleep(3000);
     }
 
-    public int resultPage() throws InterruptedException {
-
-        Thread.sleep(5000);
+    public void resultPage() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         logger.info("Total product on final result page** " + filteredResult.getText());
 
         List<WebElement> productName = driver.findElements(By.xpath("//*[@class='s-result-item s-asin sg-col-0-of-12 sg-col-16-of-20 sg-col s-widget-spacing-small sg-col-12-of-16']//h2"));
@@ -275,16 +266,11 @@ public class BasePO {
             for (int i = 0; i < productName.size(); i++) {
 
                 logger.info("Product Name : " + productName.get(i).getText() + " **** " + " Product Price : " + productPrice.get(i).getText() + " ***** " + " Product Link : " + productLink.get(i).getAttribute("href"));
-                status=1;
             }
-
-            Thread.sleep(3000);
 
         } catch (Exception e) {
             logger.info(String.valueOf(e));
         }
-
-        return status;
     }
 
     public void launchBrowserStackURL() {
@@ -292,20 +278,20 @@ public class BasePO {
     }
 
     public void signIn() throws InterruptedException {
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         driver.manage().window().maximize();
         bsSignIn.click();
-
-        bsUserName.sendKeys(readPropertiesFile("bsUsername"));
-        bsUserPassword.sendKeys(readPropertiesFile("bsPassword"));
+        bsUserName.sendKeys(readPropertiesFile("bsusername"));
+        bsUserPassword.sendKeys(readPropertiesFile("baspassword"));
 
         bsUserSubmit.click();
+        Thread.sleep(3000);
     }
 
     public void liveSession() throws InterruptedException {
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         driver.navigate().to("https://live.browserstack.com/");
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         assert(liveDashboard.isDisplayed()) :"Live dashboard is not launched!";
         logger.info("Live dashboard is launched successfully.");
         Thread.sleep(3000);
@@ -330,7 +316,7 @@ public class BasePO {
     }
 
     public void liveWindowsBrowser(String browser) throws InterruptedException {
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         if(browser.equals("chrome")) {
             logger.info("Selecting random Chrome browser");
             List<WebElement> chromeBrowser = driver.findElements(By.xpath("//*[@data-test-browser='chrome']//div[@role='listitem']"));
@@ -350,8 +336,8 @@ public class BasePO {
         logger.info("launching browser....");
     }
 
-    public int liveSessionTesting() throws InterruptedException {
-        Thread.sleep(3000);
+    public void liveSessionTesting() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         try
         {
                 logger.info("Live session is established, browser is launched");
@@ -368,15 +354,12 @@ public class BasePO {
                         .sendKeys("BrowserStack" + Keys.ENTER)
                         .perform();
                 Thread.sleep(3000);
-                status=1;
         }
         catch(Exception e)
         {
 
         }
-        return status;
     }
-
     public void testStatus(int status) {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
 

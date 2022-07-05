@@ -1,0 +1,13 @@
+bStackDemoURL=https://bstackdemo.com/
+productSearch=iPhone 12
+runOn=BrowserStack
+shippingFirstName=Siddhi
+shippingLastName=Rao
+shippingAddress=Mumbai
+shippingProvience=MH
+shippingPostalCode=401105
+amazonDemoURL=https://www.amazon.in/
+amazonProductSearch=iPhone X
+browserStackURL=https://www.browserstack.com/
+bsusername=siddhi.r+demo@browserstack.com
+baspassword=Siddemo@1234

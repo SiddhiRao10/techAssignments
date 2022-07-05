@@ -6,7 +6,10 @@
   "capabilities": {
     "build": "LiveInceptionAssignment",
     "name": "bsLiveTest_parallel",
-    "browserstack.debug": true
+    "browserstack.debug": true,
+    "browserstack.maskCommands": "sendType, sendPress, setHTTPCredentials, setStorageState, setGeolocation",
+    "browserstack.networkLogs": true,
+    "browserstack.geoLocation": "IN"
   },
 
   "environments": {

@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [LiveInception]" guice-stage="DEVELOPMENT" verbose="0">
-  <parameter name="environment" value="env1"/>
+<suite name="Failed suite [LiveInception]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="environment" value="env2"/>
+  <parameter name="browser" value="firefox"/>
   <parameter name="config" value="parallel.bsLiveInception.conf.json"/>
-  <test name="bsLiveTest-env1">
+  <test name="bsLiveTest-chrome">
     <parameter name="environment" value="env1"/>
+    <parameter name="browser" value="chrome"/>
     <parameter name="config" value="parallel.bsLiveInception.conf.json"/>
     <classes>
       <class name="bsLiveInception.liveInceptionTest"/>
     </classes>
-  </test> <!-- bsLiveTest-env1 -->
-  <test parallel="tests" name="bsLiveTest-env1(failed)">
-    <parameter name="environment" value="env1"/>
+  </test> <!-- bsLiveTest-chrome -->
+  <test name="bsLiveTest-firefox">
+    <parameter name="environment" value="env2"/>
+    <parameter name="browser" value="firefox"/>
     <parameter name="config" value="parallel.bsLiveInception.conf.json"/>
     <classes>
-      <class name="bsLiveInception.liveInceptionTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="liveSession"/>
-        </methods>
-      </class> <!-- bsLiveInception.liveInceptionTest -->
+      <class name="bsLiveInception.liveInceptionTest"/>
     </classes>
-  </test> <!-- bsLiveTest-env1(failed) -->
+  </test> <!-- bsLiveTest-firefox -->
 </suite> <!-- Failed suite [LiveInception] -->
