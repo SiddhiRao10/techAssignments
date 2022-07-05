@@ -37,7 +37,7 @@ public class BrowserStackTestNGTest {
             JSONParser parser = new JSONParser();
             JSONObject config = (JSONObject) parser.parse(new FileReader("src/test/resources/" + config_file));
             JSONObject envs = (JSONObject) config.get("environments");
-
+            String buildNameTest = buildName + envs.toString();
             Map<String, String> envCapabilities = (Map<String, String>) envs.get(environment);
             Iterator it = envCapabilities.entrySet().iterator();
             while (it.hasNext()) {
@@ -51,7 +51,7 @@ public class BrowserStackTestNGTest {
                 Map.Entry pair = (Map.Entry) it.next();
                 if (capabilities.getCapability(pair.getKey().toString()) == null) {
                     capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
-                    capabilities.setCapability("build", buildName);
+                    capabilities.setCapability("build", buildNameTest);
                 }
             }
             if (username == null) {
