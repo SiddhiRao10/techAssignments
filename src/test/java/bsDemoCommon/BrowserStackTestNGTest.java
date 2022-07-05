@@ -27,17 +27,18 @@ public class BrowserStackTestNGTest {
     public String bsdemousername = System.getenv("BROWSERSTACK_DEMO_SITE_USERNAME");
     public String bsdemopassword = System.getenv("BROWSERSTACK_DEMO_SITE_PASSWORD");
     String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
-
+ int i=0;
     @SuppressWarnings("unchecked")
     @BeforeMethod(alwaysRun = true)
     @Parameters(value = {"config", "environment"})
     public void setUp(String config_file, String environment) throws Exception {
+        i++;
         File name= new File("src/test/resources/" + config_file);
         if(!(name.equals("parallel.bsLiveInception.conf.json"))) {
             JSONParser parser = new JSONParser();
             JSONObject config = (JSONObject) parser.parse(new FileReader("src/test/resources/" + config_file));
             JSONObject envs = (JSONObject) config.get("environments");
-            String buildNameTest = buildName + envs.toString();
+            String buildNameTest = buildName + "test run "+i;
             Map<String, String> envCapabilities = (Map<String, String>) envs.get(environment);
             Iterator it = envCapabilities.entrySet().iterator();
             while (it.hasNext()) {
