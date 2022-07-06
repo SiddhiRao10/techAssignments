@@ -1,14 +1,13 @@
 {
   "server": "hub-cloud.browserstack.com",
-  "user": "siddhirao_EFftXN",
-  "key": "7XEYboWHDzwViv4jSzaJ",
 
   "capabilities": {
     "name": "bsLiveTest_parallel",
     "browserstack.debug": true,
     "browserstack.maskCommands": "sendType, sendPress, setHTTPCredentials, setStorageState, setGeolocation",
     "browserstack.networkLogs": true,
-    "browserstack.geoLocation": "IN"
+    "browserstack.geoLocation": "IN",
+    "browserstack.local": true
   },
 
   "environments": {

@@ -11,7 +11,6 @@ import java.net.URISyntaxException;
 public class stackDemoTest extends BrowserStackTestNGTest {
     public stackDemoTest() {
     }
-
     @Test
     public void searchProduct() throws InterruptedException {
        BasePO po = new BasePO(this.driver);

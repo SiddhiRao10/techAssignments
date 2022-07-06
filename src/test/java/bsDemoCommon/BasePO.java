@@ -5,9 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.*;
 import java.util.*;
@@ -277,12 +275,12 @@ public class BasePO {
         driver.get(readPropertiesFile("browserStackURL"));
     }
 
-    public void signIn() throws InterruptedException {
+    public void signIn(String demositeUserName, String demositePassword) throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         driver.manage().window().maximize();
         bsSignIn.click();
-        bsUserName.sendKeys(readPropertiesFile("bsusername"));
-        bsUserPassword.sendKeys(readPropertiesFile("baspassword"));
+        bsUserName.sendKeys(demositeUserName);
+        bsUserPassword.sendKeys(demositePassword);
 
         bsUserSubmit.click();
         Thread.sleep(3000);
@@ -369,5 +367,11 @@ public class BasePO {
         else
             jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"failed\", \"reason\": \"Test Failed\"}}");
 
+    }
+
+    public void launchlocalURL() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.get("http://localhost:45454/");
+        logger.info("local environemnt url is launched successfully");
     }
 }

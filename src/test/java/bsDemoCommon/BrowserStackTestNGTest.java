@@ -23,10 +23,11 @@ public class BrowserStackTestNGTest {
     public static final Logger logger = Logger.getLogger(String.valueOf(BasePO.class));
     DesiredCapabilities capabilities = new DesiredCapabilities();
     String username = System.getenv("BROWSERSTACK_USERNAME");
-    String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
-    public String bsdemousername = System.getenv("BROWSERSTACK_DEMO_SITE_USERNAME");
-    public String bsdemopassword = System.getenv("BROWSERSTACK_DEMO_SITE_PASSWORD");
+    public String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
     String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
+
+    public String demositeUserName = System.getenv("BROWSERSTACK_DEMO_SITE_USERNAME");
+    public String demositePassword = System.getenv("BROWSERSTACK_DEMO_SITE_PASSWORD");
     @SuppressWarnings("unchecked")
     @BeforeMethod(alwaysRun = true)
     @Parameters(value = {"config", "environment"})
@@ -64,7 +65,7 @@ public class BrowserStackTestNGTest {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void tearDown(ITestResult result) {
+    public void tearDown(ITestResult result) throws Exception {
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         if (result.getStatus() == ITestResult.SUCCESS) {
             jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \"passed\", \"reason\": \"Test Passed\"}}");

@@ -19,7 +19,7 @@ public class liveInceptionTest  extends BrowserStackTestNGTest {
         po.launchBrowserStackURL();
 
         logger.info("*** BrowserStack SignIn***");
-        po.signIn();
+        po.signIn(demositeUserName,demositePassword);
 
         logger.info("*** BrowserStack Live Session***");
         po.liveSession();
