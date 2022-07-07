@@ -3,10 +3,10 @@ pipeline {
    stages {
       stage('setup') {
          steps {
-            browserstack(credentialsId: '7cb321ca-3f19-45a1-90ef-b804b630dcba') {
+            browserstack(credentialsId: 'd7bc1b99-2a8d-44fe-b6c7-738e747b9c52') {
                echo "hello"
             }
-            browserstack(credentialsId: '7cb321ca-3f19-45a1-90ef-b804b630dcba', localConfig: [localOptions: '<local-options>', localPath: '/path/to/local']) {
+            browserstack(credentialsId: 'd7bc1b99-2a8d-44fe-b6c7-738e747b9c52', localConfig: [localOptions: '<local-options>', localPath: '/path/to/local']) {
                 // commands for executing tests
                  sh 'wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"'
                                  sh 'unzip BrowserStackLocal-linux-x64.zip'

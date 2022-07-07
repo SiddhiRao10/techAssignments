@@ -58,21 +58,4 @@
       </class> <!-- amazonProductSearch.productSearchTest -->
     </classes>
   </test> <!-- amazonProductSearch-firefox(failed) -->
-  <test parallel="tests" name="amazonProductSearch-chrome(failed)">
-    <parameter name="environment" value="env1"/>
-    <parameter name="config" value="parallel.amazon.conf.json"/>
-    <classes>
-      <class name="amazonProductSearch.productSearchTest">
-        <methods>
-          <include name="searchProduct"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- amazonProductSearch.productSearchTest -->
-    </classes>
-  </test> <!-- amazonProductSearch-chrome(failed) -->
 </suite> <!-- Failed suite [AmazonProductSearchParallelTest] -->

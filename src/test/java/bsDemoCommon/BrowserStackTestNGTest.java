@@ -75,5 +75,5 @@ public class BrowserStackTestNGTest {
 
         driver.quit();
     }
-    }
+}
 

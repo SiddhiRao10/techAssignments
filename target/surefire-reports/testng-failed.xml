@@ -1,15 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [localTest]" guice-stage="DEVELOPMENT" verbose="0">
-  <parameter name="environment" value="env2"/>
-  <parameter name="browser" value="safari"/>
-  <parameter name="config" value="localTest.json"/>
-  <test name="localTest-safari">
-    <parameter name="environment" value="env2"/>
-    <parameter name="browser" value="safari"/>
-    <parameter name="config" value="localTest.json"/>
+<suite parallel="tests" name="Failed suite [BrowserStackDemoSite]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="environment" value="env5"/>
+  <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+  <test name="bsDemoTest-chrome">
+    <parameter name="environment" value="env1"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
     <classes>
-      <class name="bsLocalTesting.localTesting"/>
+      <class name="bsDemoTest.stackDemoTest"/>
     </classes>
-  </test> <!-- localTest-safari -->
-</suite> <!-- Failed suite [localTest] -->
+  </test> <!-- bsDemoTest-chrome -->
+  <test name="bsDemoTest-firefox">
+    <parameter name="environment" value="env2"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+    <classes>
+      <class name="bsDemoTest.stackDemoTest"/>
+    </classes>
+  </test> <!-- bsDemoTest-firefox -->
+  <test name="bsDemoTest-safari">
+    <parameter name="environment" value="env3"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+    <classes>
+      <class name="bsDemoTest.stackDemoTest"/>
+    </classes>
+  </test> <!-- bsDemoTest-safari -->
+  <test name="bsDemoTest-android">
+    <parameter name="environment" value="env4"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+    <classes>
+      <class name="bsDemoTest.stackDemoTest"/>
+    </classes>
+  </test> <!-- bsDemoTest-android -->
+  <test name="bsDemoTest-iOS">
+    <parameter name="environment" value="env5"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+    <classes>
+      <class name="bsDemoTest.stackDemoTest"/>
+    </classes>
+  </test> <!-- bsDemoTest-iOS -->
+  <test parallel="tests" name="bsDemoTest-iOS(failed)">
+    <parameter name="environment" value="env5"/>
+    <parameter name="config" value="parallel.bsDemoTest.conf.json"/>
+    <classes>
+      <class name="bsDemoTest.stackDemoTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="searchProduct"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- bsDemoTest.stackDemoTest -->
+    </classes>
+  </test> <!-- bsDemoTest-iOS(failed) -->
+</suite> <!-- Failed suite [BrowserStackDemoSite] -->

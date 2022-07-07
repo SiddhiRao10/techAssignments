@@ -1,62 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="0.336" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="3.114" tests="5" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="18.0.1.1+0"/>
-    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/18.0.1.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/siddhirao/IdeaProjects/automateAssignments"/>
-    <property name="java.vm.vendor" value="Homebrew"/>
-    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.vm.version" value="18.0.1.1+2-6"/>
+    <property name="sun.boot.library.path" value="/Users/siddhirao/Library/Java/JavaVirtualMachines/openjdk-18.0.1.1/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/siddhirao/Projects/techAssignments/techAssignments"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="path.separator" value=":"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/siddhirao/IdeaProjects/automateAssignments"/>
+    <property name="user.dir" value="/Users/siddhirao/Projects/techAssignments/techAssignments"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="18.0.1.1+0"/>
-    <property name="os.arch" value="aarch64"/>
-    <property name="java.io.tmpdir" value="/var/folders/_v/r8r5383j1sl8mwbpdfj9w1w80000gq/T/"/>
+    <property name="java.runtime.version" value="18.0.1.1+2-6"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/bv/g4c_fjpn5017krrxpy39pz_80000gq/T/"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/opt/homebrew/Cellar/maven/3.8.6/libexec/bin/m2.conf"/>
+    <property name="classworlds.conf" value="/Users/siddhirao/Downloads/apache-maven-3.8.6/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/siddhirao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="maven.conf" value="/opt/homebrew/Cellar/maven/3.8.6/libexec/conf"/>
+    <property name="maven.conf" value="/Users/siddhirao/Downloads/apache-maven-3.8.6/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="62.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="12.4"/>
-    <property name="library.jansi.path" value="/opt/homebrew/Cellar/maven/3.8.6/libexec/lib/jansi-native"/>
+    <property name="library.jansi.path" value="/Users/siddhirao/Downloads/apache-maven-3.8.6/lib/jansi-native"/>
     <property name="user.home" value="/Users/siddhirao"/>
     <property name="user.timezone" value="Asia/Kolkata"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="18"/>
     <property name="user.name" value="siddhirao"/>
-    <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.8.6/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.class.path" value="/Users/siddhirao/Downloads/apache-maven-3.8.6/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -P localTest"/>
-    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/18.0.1.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -P BrowserStackDemoSite"/>
+    <property name="java.home" value="/Users/siddhirao/Library/Java/JavaVirtualMachines/openjdk-18.0.1.1/Contents/Home"/>
     <property name="apple.awt.application.name" value="Launcher"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.version" value="18.0.1.1"/>
     <property name="native.encoding" value="US-ASCII"/>
-    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
     <property name="sun.stderr.encoding" value="US-ASCII"/>
-    <property name="maven.home" value="/opt/homebrew/Cellar/maven/3.8.6/libexec"/>
+    <property name="maven.home" value="/Users/siddhirao/Downloads/apache-maven-3.8.6"/>
     <property name="file.separator" value="/"/>
     <property name="java.version.date" value="2022-04-22"/>
-    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="java.vendor.version" value="Homebrew"/>
     <property name="sun.stdout.encoding" value="US-ASCII"/>
   </properties>
-  <testcase name="localTest" classname="bsLocalTesting.localTesting" time="0.336"/>
+  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="3.114"/>
+  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="8.823"/>
+  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="12.264"/>
+  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="12.314">
+    <failure message="Error Domain=com.facebook.WebDriverAgent Code=1 &quot;The on-screen keyboard must be present to send keys&quot; UserInfo={NSLocalizedDescription=The on-screen keyboard must be present to send keys} (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;&#10;System info: host: &apos;Siddhis-MacBook-Pro.local&apos;, ip: &apos;2401:4900:1c21:9faa:f9c1:b13a:858f:4a8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1.1&apos;&#10;Driver info: org.openqa.selenium.remote.RemoteWebDriver&#10;Capabilities {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCUITest, bootstrapPath: /usr/local/.browserstack/co..., browser: iphone, browserName: safari, browserstack-tunnel: true, browserstack.appium_version: 1.17.0, browserstack.isTargetBased: true, browserstack.is_hub_canary: false, browserstack.localGeoLocation: IN, buildName: automateAssignment, capabilities: {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCUITest, bootstrapPath: /usr/local/.browserstack/co..., browser: iphone, browserName: safari, browserstack-tunnel: true, browserstack.appium_version: 1.17.0, browserstack.isTargetBased: true, browserstack.is_hub_canary: false, browserstack.localGeoLocation: IN, buildName: automateAssignment, custom_replay_kit_params: {&quot;rotation&quot;:&quot;false&quot;,&quot;captur..., databaseEnabled: false, detected_language: selenium/3.12.0 (java mac), device: iphone, deviceName: iPhone 12, deviceOrientation: PORTRAIT, javascriptEnabled: true, keychainPassword: [REDACTED VALUE], keychainPath: [REDACTED VALUE], locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 12-14.2}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 14, os_version: 14.0, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: 7e8ce4636768136d141d2fea24a..., sessionName: bsDemoTest_parallel, takesScreenshot: true, udid: 00008101-001A71AC2682001E, useXctestrunFile: true, version: , wda_port: 8404, webStorageEnabled: false, webkitResponseTimeout: 20000}, custom_replay_kit_params: {&quot;rotation&quot;:&quot;false&quot;,&quot;captur..., databaseEnabled: false, detected_language: selenium/3.12.0 (java mac), device: iphone, deviceName: iPhone 12, deviceOrientation: PORTRAIT, javascriptEnabled: true, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 12-14.2}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 14, os_version: 14.0, platform: MAC, platformName: MAC, platformVersion: 14.1, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: 7e8ce4636768136d141d2fea24a..., sessionName: bsDemoTest_parallel, takesScreenshot: true, udid: 00008101-001A71AC2682001E, useXctestrunFile: true, version: , wda_port: 8404, webStorageEnabled: false, webkitResponseTimeout: 20000}&#10;Session ID: 7e8ce4636768136d141d2fea24abc85ba3629c42" type="org.openqa.selenium.InvalidElementStateException">org.openqa.selenium.InvalidElementStateException: Error Domain=com.facebook.WebDriverAgent Code=1 "The on-screen keyboard must be present to send keys" UserInfo={NSLocalizedDescription=The on-screen keyboard must be present to send keys} (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'Siddhis-MacBook-Pro.local', ip: '2401:4900:1c21:9faa:f9c1:b13a:858f:4a8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.4', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCUITest, bootstrapPath: /usr/local/.browserstack/co..., browser: iphone, browserName: safari, browserstack-tunnel: true, browserstack.appium_version: 1.17.0, browserstack.isTargetBased: true, browserstack.is_hub_canary: false, browserstack.localGeoLocation: IN, buildName: automateAssignment, capabilities: {64bit: false, acceptSslCert: false, acceptSslCerts: false, automationName: XCUITest, bootstrapPath: /usr/local/.browserstack/co..., browser: iphone, browserName: safari, browserstack-tunnel: true, browserstack.appium_version: 1.17.0, browserstack.isTargetBased: true, browserstack.is_hub_canary: false, browserstack.localGeoLocation: IN, buildName: automateAssignment, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.12.0 (java mac), device: iphone, deviceName: iPhone 12, deviceOrientation: PORTRAIT, javascriptEnabled: true, keychainPassword: [REDACTED VALUE], keychainPath: [REDACTED VALUE], locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 12-14.2}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 14, os_version: 14.0, platform: MAC, platformName: iOS, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: 7e8ce4636768136d141d2fea24a..., sessionName: bsDemoTest_parallel, takesScreenshot: true, udid: 00008101-001A71AC2682001E, useXctestrunFile: true, version: , wda_port: 8404, webStorageEnabled: false, webkitResponseTimeout: 20000}, custom_replay_kit_params: {"rotation":"false","captur..., databaseEnabled: false, detected_language: selenium/3.12.0 (java mac), device: iphone, deviceName: iPhone 12, deviceOrientation: PORTRAIT, javascriptEnabled: true, locationContextEnabled: false, mobile: {browser: mobile, version: iPhone 12-14.2}, networkConnectionEnabled: false, newCommandTimeout: 0, new_bucketing: true, noReset: true, orientation: PORTRAIT, orig_os: ios, osVersion: 14, os_version: 14.0, platform: MAC, platformName: MAC, platformVersion: 14.1, realMobile: true, safariIgnoreFraudWarning: true, safariInitialUrl: http://mobile-internet-chec..., sessionId: 7e8ce4636768136d141d2fea24a..., sessionName: bsDemoTest_parallel, takesScreenshot: true, udid: 00008101-001A71AC2682001E, useXctestrunFile: true, version: , wda_port: 8404, webStorageEnabled: false, webkitResponseTimeout: 20000}
+Session ID: 7e8ce4636768136d141d2fea24abc85ba3629c42
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
+	at org.openqa.selenium.remote.RemoteKeyboard.sendKeys(RemoteKeyboard.java:38)
+	at org.openqa.selenium.interactions.SendKeysAction.perform(SendKeysAction.java:57)
+	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:36)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:641)
+	at bsDemoCommon.BasePO.login(BasePO.java:145)
+	at bsDemoTest.stackDemoTest.searchProduct(stackDemoTest.java:21)
+</failure>
+  </testcase>
+  <testcase name="searchProduct" classname="bsDemoTest.stackDemoTest" time="25.202"/>
 </testsuite>
