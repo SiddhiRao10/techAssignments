@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [localTest]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="environment" value="env2"/>
+  <parameter name="browser" value="safari"/>
+  <parameter name="config" value="localTest.json"/>
+  <test name="localTest-safari">
+    <parameter name="environment" value="env2"/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="config" value="localTest.json"/>
+    <classes>
+      <class name="bsLocalTesting.localTesting"/>
+    </classes>
+  </test> <!-- localTest-safari -->
+</suite> <!-- Failed suite [localTest] -->

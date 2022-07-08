@@ -1,0 +1,44 @@
+{
+  "server": "hub-cloud.browserstack.com",
+
+  "capabilities": {
+    "name": "bsDemoTest_parallel",
+    "browserstack.debug": true,
+    "browserstack.maskCommands": "sendType, sendPress, setHTTPCredentials, setStorageState, setGeolocation",
+    "browserstack.networkLogs": true,
+    "browserstack.geoLocation": "IN",
+    "browserstack.local": true
+  },
+
+  "environments": {
+    "env1": {
+      "browser": "chrome",
+      "os": "Windows",
+      "osVersion": "10",
+      "local": "false",
+    },
+    "env2": {
+      "browser": "firefox",
+      "os": "Windows",
+      "osVersion": "10",
+      "local": "false",
+    },
+    "env3": {
+      "browser": "Safari",
+      "os": "OS X",
+      "osVersion": "Big Sur",
+      "local": "false",
+    },
+    "env4": {
+      "browser": "chrome",
+      "osVersion": "10.0",
+      "deviceName": "Samsung Galaxy S20",
+      "browserstack.networkProfile": "4g-lte-good"
+    },
+    "env5": {
+      "osVersion": "14",
+      "deviceName": "iPhone 12",
+      "browserstack.customNetwork": "1000, 1000, 100, 1"
+    }
+  }
+}

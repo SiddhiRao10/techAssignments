@@ -1,0 +1,21 @@
+{
+  "server": "hub-cloud.browserstack.com",
+
+  "capabilities": {
+    "name": "bsLiveTest_parallel",
+    "browserstack.debug": true,
+    "browserstack.maskCommands": "sendType, sendPress, setHTTPCredentials, setStorageState, setGeolocation",
+    "browserstack.networkLogs": true,
+    "browserstack.geoLocation": "IN",
+    "browserstack.local": true
+  },
+
+  "environments": {
+    "env1": {
+      "browser": "chrome"
+    },
+    "env2": {
+      "browser": "firefox"
+    }
+  }
+}

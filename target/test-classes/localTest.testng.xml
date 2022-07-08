@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="localTest">
+
+    <test name="localTest-safari">
+        <parameter name="config" value="localTest.json"/>
+        <parameter name="environment" value="env2"/>
+        <parameter name="browser" value="safari"></parameter>
+        <classes>
+            <class name="bsLocalTesting.localTesting"/>
+        </classes>
+    </test>
+
+</suite>
